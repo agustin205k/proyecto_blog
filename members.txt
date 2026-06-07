@@ -1,0 +1,7 @@
+Team:
+  Fabricio Diego Federico Sanchez
+  Benjamin Letona
+  Julio Gerardo Monteros
+  Mauro Agustín Solórzano
+
+Scrum Master: Mauro Agustín Solórzano
