@@ -30,13 +30,18 @@ h1{
 
 #blog-logo{
   height: 80px;
-  width: 120px;
+  width: 80px;
+}
+
+.root{/* COLORES PALETA DE COLORES */
+  --color-red:#A31310;
 }
 
 /* BOOTSTRAP CONFIG */
+/* MODAL CONFIG */
 .modal-content{
   background-color: #1F1F22;
-  color: #C77C7B;
+  color: var(--color-red);
 }
 
 .modal-content > .modal-header > .btn-close{
@@ -58,7 +63,7 @@ h1{
 
 .modal-content option{
   background-color: #1F1F22;
-  color: #C77C7B;
+  color: var(--color-red);
 }
 
 .modal-footer > button{
@@ -86,6 +91,59 @@ h1{
   margin-right: 10px;
 }
 
+/* OFF CANVAS CONFIG */
+.offcanvas{
+  background-color: #1F1F22;
+  color: var(--color-red);
+}
+
+#staticBackdrop{
+  width: 180px;
+}
+
+.offcanvas-header{
+  color: #F2D7D5;
+  background-color: var(--color-red);
+  border-radius: 0%;
+}
+
+.offcanvas-header .btn-close{
+  background-color: #F2D7D5;
+  box-shadow: none;
+  opacity: 1;
+}
+
+.offcanvas-header .btn-close:active{
+  box-shadow: none;
+  outline: 2px solid #1F1F22;
+}
+
+
+.offcanvas-header h5{
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.offcanvas-body{
+  background-color: #1F1F22;
+  width: 100%;
+}
+
+.offcanvas-body ul{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 20px;
+}
+
+.offcanvas-body ul > li > a{
+  border-bottom: 1px solid var(--color-red);
+  padding-bottom: 10px;
+  font-weight: bold;
+}
+
+
+
 
 /* HEADER SECTION */
 .root__header{
@@ -96,7 +154,7 @@ h1{
   display: flex;
   width: 100%;
   background-color: #1F1F22;
-  color:#C77C7B;
+  color:#A31310;
   padding: 20px;
 }
 
@@ -108,10 +166,6 @@ h1{
 .root__header__nav__menu button{
   padding: 10px 20px;
   border-radius: 5px;
-}
-
-.root__header__nav__menu button svg{
-  
 }
 
 .root__header__nav__menu ul{
@@ -134,7 +188,7 @@ h1{
 }
 
 .root__header__nav__logo button{
-  color: #C77C7B;
+  color: var(--color-red);
   border:none;
   background-color: transparent;
 }
@@ -161,7 +215,7 @@ h1{
 .subscription__group input {
   border: none;
   background-color: inherit;
-  border-bottom:1px solid #C77C7B;
+  border-bottom:1px solid var(--color-red);
   transition: opacity 0.3s ease;
 } 
 
@@ -169,7 +223,7 @@ h1{
   color: #8C8F93;
   border: none;
   background-color: inherit;
-  border:1px solid #C77C7B;
+  border:1px solid var(--color-red);
   border-radius: 5px;
   transition: opacity 0.3s ease;
   width: 220px;
@@ -184,7 +238,7 @@ h1{
 .subscription__group select:focus{
   outline: none !important;
   box-shadow: none !important;
-  border: 1px solid #C77C7B;
+  border: 1px solid var(--color-red);
 }
 
 .subscription__group input:focus::placeholder,
@@ -237,7 +291,7 @@ h1{
   }
 
   .root__header__nav__menu button{
-    background-color: #C77C7B;
+    background-color: var(--color-red);
     border: none;
     color:#1F1F22;
     transition: 0.4s ease outline-offset,
