@@ -35,12 +35,16 @@ h1{
 
 .root{/* COLORES PALETA DE COLORES */
   --color-red:#A31310;
+  --color-gray: #8C8F93;
+  --color-white: #F2D7D5;
+  --color-black: #1F1F22;
+  min-width: 100vh;
 }
 
 /* BOOTSTRAP CONFIG */
 /* MODAL CONFIG */
 .modal-content{
-  background-color: #1F1F22;
+  background-color: var(--color-black);
   color: var(--color-red);
 }
 
@@ -54,15 +58,15 @@ h1{
 .modal-content > .modal-header > .btn-close:active{
   border: none;
   box-shadow: none;
-  background-color: #8C8F93;
+  background-color: var(--color-gray);
 }
 
 .modal-content input{
-  color: #8C8F93;
+  color: var(--color-gray);
 }
 
 .modal-content option{
-  background-color: #1F1F22;
+  background-color: var(--color-black);
   color: var(--color-red);
 }
 
@@ -74,16 +78,16 @@ h1{
 .modal-content > .modal-footer > .btn-secondary:hover{
   border: none;
   box-shadow: none;
-  background-color: #8C8F93;
-  color: #1F1F22;
+  background-color: var(--color-gray);
+  color: var(--color-black);
 }
 
 .modal-content > .modal-footer > .btn-primary:focus,
 .modal-content > .modal-footer > .btn-primary:hover{
   border: none;
   box-shadow: none;
-  background-color: #F2D7D5;
-  color: #1F1F22;
+  background-color: var(--color-white);
+  color: var(--color-black);
 }
 
 .modal-footer{
@@ -93,7 +97,7 @@ h1{
 
 /* OFF CANVAS CONFIG */
 .offcanvas{
-  background-color: #1F1F22;
+  background-color: var(--color-black);
   color: var(--color-red);
 }
 
@@ -102,20 +106,20 @@ h1{
 }
 
 .offcanvas-header{
-  color: #F2D7D5;
+  color: var(--color-white);
   background-color: var(--color-red);
   border-radius: 0%;
 }
 
 .offcanvas-header .btn-close{
-  background-color: #F2D7D5;
+  background-color: var(--color-white);
   box-shadow: none;
   opacity: 1;
 }
 
 .offcanvas-header .btn-close:active{
   box-shadow: none;
-  outline: 2px solid #1F1F22;
+  outline: 2px solid var(--color-black);
 }
 
 
@@ -125,7 +129,7 @@ h1{
 }
 
 .offcanvas-body{
-  background-color: #1F1F22;
+  background-color: var(--color-black);
   width: 100%;
 }
 
@@ -152,8 +156,10 @@ h1{
 
 .root__header__nav{
   display: flex;
+  position: fixed;
+  top: 0;
   width: 100%;
-  background-color: #1F1F22;
+  background-color: var(--color-black);
   color:#A31310;
   padding: 20px;
 }
@@ -220,7 +226,7 @@ h1{
 } 
 
 .subscription__group select{
-  color: #8C8F93;
+  color: var(--color-gray);
   border: none;
   background-color: inherit;
   border:1px solid var(--color-red);
@@ -293,7 +299,7 @@ h1{
   .root__header__nav__menu button{
     background-color: var(--color-red);
     border: none;
-    color:#1F1F22;
+    color:var(--color-black);
     transition: 0.4s ease outline-offset,
                 0.4s ease background-color;  
   }
@@ -305,14 +311,14 @@ h1{
 
   .root__header__nav__menu button:hover,
   .root__header__nav__menu button:focus{
-    outline: 2px solid #8C8F93;
+    outline: 2px solid var(--color-gray);
     outline-offset: 5px;
     border-radius: 5px;
-    background-color: #F2D7D5;
+    background-color: var(--color-white);
   }
 
   .root__header__nav__menu a:hover,.root__header__nav__menu a:focus{
-    outline: 2px solid #8C8F93;
+    outline: 2px solid var(--color-gray);
     outline-offset: 5px;
     border-radius: 5px;
   }
@@ -340,7 +346,6 @@ h1{
   }
 }
 /* MAIN SECTION */
-
 
 
 /* FOOTER SECTION */
