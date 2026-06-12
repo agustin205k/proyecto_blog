@@ -1,0 +1,13 @@
+Paleta de colores:
+
+Suave Atardecer Urbano:
+  rosa:#F2D7D5;
+  rojo:#C77C7B;
+  gris:#8C8F93;
+  negro:#1F1F22;
+
+Pastel Pizarra Roja:
+  crema:#F6E9D9;
+  rosa:#D9A5A0;
+  gris:#9BA0A6;
+  negro:#2A2B2F;

@@ -25,12 +25,137 @@ para recuperar la misma.
         <!-- Code Here Navbar -->
         <!-- Navbar is the same in all pages -->
 
+        <div class="root__header__nav__logo">
+
+          <div class="">
+            
+            <!-- offcanvas bootstrap -->
+            <button class="" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+              </svg>
+            </button>
+
+            <!-- offcanvas bootstrap -->
+            <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="staticBackdropLabel">Menu</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                <div>
+                  <ul>
+                    <li><a href="./index.html">Inicio</a></li>
+                    <li><a href="./login.html">Sesion</a></li>
+                    <li><a href="./contact.html">Contacto</a></li>
+                    <li><a href="./about_us.html">Nosotros</a></li>
+                  </ul>        
+                </div>
+              </div>
+            </div>
+
+            <h1>
+              <span>El Ritual</span>
+              <span>del Rock</span>
+            </h1>
+          </div>
+          <div class="">
+            <img id="blog-logo" src="./assets/images/blog-logo.png" alt="">
+          </div>
+        </div>
+
+        <div class="root__header__nav__menu">
+          
+          <!-- Button trigger modal -->
+          <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Subscribete
+          </button>
+          <ul>
+            <li><a href="./index.html">Inicio</a></li>
+            <li><a href="./login.html">Sesion</a></li>
+            <li><a href="./contact.html">Contacto</a></li>
+            <li><a href="./about_us.html">Nosotros</a></li>
+          </ul>
+
+          
+        </div>
 
         <!-- Code Here -->
       </nav>
     </header>
 
     <div class="root__principal">
+
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2 class="modal-title fs-5" id="exampleModalLabel">Subscribete ahora, y enterate de todo!</h2>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form class="subscription__form" action="#" id="subscription-form">
+                <div class="subscription__info">
+                  <div class="subscription__group">
+                    <label for="subscription-email" class="subscription__label">Email</label>
+                    <input type="email" id="subscription-email" name="email" 
+                    class="subscription__input" placeholder="youremail@example.com" required>
+                  </div>
+
+                  <div class="subscription__group">
+                    <label for="subscription-name" class="subscription__label">Nombre</label>
+                    <input type="text" id="subscription-name" name="name" 
+                    class="subscription__input" placeholder="Your name" required>
+                  </div>
+                </div>
+
+                <div class="subscription__info">
+                  <div class="subscription__group">
+                    <label for="card-type">Tipo de tarjeta:</label>
+                    <select id="card-type" name="card-type" required>
+                      <option value="">Select a card</option>
+                      <option value="visa-debit">Visa Debit</option>
+                      <option value="visa-credit">Visa Credit</option>
+                      <option value="mastercard">MasterCard</option>
+                      <option value="amex">American Express</option>
+                    </select>
+                  </div>
+                    
+                  <div class="subscription__group">
+                    <label for="card-number">Card Number:</label>
+                    <input type="text" id="card-number" name="card-number" maxlength="16" 
+                    placeholder="1234 5678 9012 3456" required>
+                  </div>
+
+                  <div class="subscription__group">
+                    <label for="card-name">Name on Card:</label>
+                    <input type="text" id="card-name" name="card-name" 
+                    placeholder="John Doe" required>
+                  </div>
+
+                  <div class="subscription__group">
+                    <label for="expiration">Expiration Date:</label>
+                    <input type="month" id="expiration" name="expiration" 
+                    placeholder="MM/YYYY" required>
+                  </div>
+
+                  <div class="subscription__group">
+                    <label for="cvv">Security Code (CVV):</label>
+                    <input type="text" id="cvv" name="cvv" maxlength="4" 
+                    placeholder="123" required>
+                  </div>
+                    
+                </div>
+              </form> 
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              <button type="submit" class="btn btn-primary" form="subscription-form">Subscribete!</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <main class="root__principal__main">
         <!-- Code Here Login -->
 
