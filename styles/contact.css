@@ -4,6 +4,12 @@ PODER REUTILIZARLAS SI ES NECESARIO O MAS OPTIMO */
 
 /* GLOBAL CONFIG */
 
+/* LAS SECCIONES ESTAN SEPARADAS ASI PARA LUEGO 
+PODER REUTILIZARLAS SI ES NECESARIO O MAS OPTIMO */
+
+
+/* GLOBAL CONFIG */
+
 *{
   margin: 0;
   padding: 0;
@@ -31,6 +37,11 @@ h1{
 #blog-logo{
   height: 80px;
   width: 80px;
+}
+
+.root__principal {
+  min-height: 60vh;
+  background-color: var(--color-gray);       
 }
 
 .root{/* COLORES PALETA DE COLORES */
@@ -145,7 +156,6 @@ h1{
   padding-bottom: 10px;
   font-weight: bold;
 }
-
 
 
 
@@ -348,4 +358,50 @@ h1{
 /* MAIN SECTION */
 
 
+
 /* FOOTER SECTION */
+footer{
+  background-color: var(--color-black);
+  border-top: 3px solid var(--color-red);
+}
+
+.columnas h3{
+  color: var(--color-red);
+}
+
+.columnas h5,input{
+  color: var(--color-white);
+}
+
+.columnas p,.columnas a{
+  color: var(--color-gray);
+}
+
+.columna-1 a{
+  color: var(--color-white);
+}
+
+.columnas button{
+  background-color: var(--color-red);
+  color: var(--color-white);
+}
+
+
+.columna-4 input{
+  background-color: var(--color-gray);
+  color: var(--color-white);
+}
+
+.columna-4 input::placeholder{
+  color: var(--color-white);
+}
+
+.columna-4 input:focus,.columna-4 input:hover,
+.columna-4 input:active{
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+.columna-copy p{
+  color: var(--color-gray);
+}
