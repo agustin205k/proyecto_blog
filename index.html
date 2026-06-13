@@ -189,19 +189,99 @@ lo tanto el diseño de la segunda columna debe aparecer debajo.
 
       <div class="root__principal__slider-container">
         <!-- Code Here Slider-->
-
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="https://wallpapers.com/images/hd/high-resolution-cottage-at-sea-c72r478obcyd2tuv.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="https://wallpapers.com/images/hd/high-resolution-background-62o19ip5ys7pbbx2.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="https://wallpapers.com/images/hd/hi-res-beach-zrx9v9rsjwoahklv.jpg" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
         <!-- Code Here -->
       </div>
-      <main class="root__principal__main">
-        <!-- Code Here Blog Content -->
-        
-        <!-- Code Here -->
-      </main>
-      <aside class="root__aside">
-        <!-- Code Here Aside Content -->
+      <div class="root__principal__blogInfo">
+        <main class="root__principal__blogInfo__container root__principal__blogInfo__container--info">
+          <!-- Code Here Blog Content -->
+          <h2>Ultimas Noticias</h2>
+          
+          <div class="card">
+            <img src="https://img.magnific.com/foto-gratis/luz-brillante-escenario-ilumina-entusiastas-fanaticos-rock-generados-ia_188544-37983.jpg?semt=ais_hybrid&w=740&q=80" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+              <a href="#" class="btn btn-primary">Ver mas</a>
+            </div>
+          </div>
 
-        <!-- Code Here -->
-      </aside>
+          <div class="card">
+            <img src="https://es.rollingstone.com/wp-content/uploads/2024/02/AperturaNAEEIB5BRZDQ7KMIGN33ZGO7BA.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+              <a href="#" class="btn btn-primary">Ver mas</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjjJTxkiUkKd9acIlR8LEFPudQNaH5bLmEYLAtD1bjzIytEcEzgAippaqw4PiIWf5_DYY_8B7QV_xM4ZhDBi-Cj1avFG3ShMvoYgNZMsAOo2FyiHDXiz3QhrbXkxfHpTEth_Xp03mUWneRh/s1600/Soda+Stereo+FREE+CONCERT+-+DVD+maurodelay.JPG" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+              <a href="#" class="btn btn-primary">Ver mas</a>
+            </div>
+          </div>
+
+          <!-- Code Here -->
+        </main>
+      
+        <aside class="root__principal__blogInfo__container root__principal__blogInfo__container--aside">
+          <!-- Code Here Aside Content -->
+          <div>
+            <form>
+              <h3>¿Se te perdio algo?, escribelo aqui!</h3>
+              
+              <div class="search__group">
+                <label for="search-query" class="search__label">Escriba el nombre del articulo</label>
+                <input type="text" id="search-query" name="q" 
+                        class="search__input" placeholder="Ej: música, tecnología..." required>
+              </div>
+
+              <button type="submit" class="search__button">Buscar</button>
+            </form>
+
+            <h3>Categorias</h3>
+            
+            <ul>
+              <li><a href="#">Conciertos</a></li>
+              <li><a href="#">Noticias</a></li>
+              <li><a href="#">Aniversarios</a></li>
+              <li><a href="#">Musicos</a></li>
+              <li><a href="#">Eventos</a></li>
+              <li><a href="#">Grupos</a></li>
+            </ul>
+          </div>
+
+          <div>
+
+          </div>
+          <!-- Code Here -->
+        </aside>
+      
+      </div>
+      
     </div>
 
     <footer class="text-secondary py-5">
