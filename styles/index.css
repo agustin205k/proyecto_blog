@@ -52,6 +52,7 @@ h1{
 }
 
 /* BOOTSTRAP CONFIG */
+
 /* MODAL CONFIG */
 .modal-content{
   background-color: var(--color-black);
@@ -175,48 +176,66 @@ body.modal-open {
   font-weight: bold;
 }
 /* CARD CONFIG */
-.card{
+.carta__container{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  margin:auto;
+  gap: 40px;
+}
+
+.carta{
   width: 95%;
   border-radius: 5px;
   box-shadow: 5px 5px 10px 2px var(--color-red);
 }
 
-.card img{
+.carta__img{
   border: 2px solid var(--color-red);
 }
 
-.card .card-body h5{
+.carta__body h5{
   color: var(--color-red);
 }
 
-.card .card-body{
+.carta__body{
+  display: flex;
+  flex-direction: column;
+  min-height: 150px;
+  flex-wrap: wrap;
   background-color: var(--color-black);
+  padding: 15px;
   color: var(--color-white);
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
-
-.card .card-body a{
+.carta__btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border:none;
   font-weight: bold;
   background-color: var(--color-red);
+  border-radius: 5px;
   color: var(--color-white);
   width: 120px;
   height: 40px;
-  float: right;
+  align-self: flex-end;
 }
 
-.card .card-body a:hover,.card .card-body a:focus,
-.card .card-body a:active{
+.carta__btn:hover,.carta__btn:focus,
+.carta__btn:active{
   background-color: var(--color-red);
   outline:2px solid #F2D7D5;
 }
 
 
-.card img {
-  min-height: 250px;
+.carta__img {
+  min-height: 300px;
   width: 100%;
 }
+
+
 
 
 /* HEADER SECTION */
@@ -433,8 +452,6 @@ body.modal-open {
   justify-content: center;
   align-items: center;
   gap: 20px;
-  /* padding: 20px; */
-  /* outline: 1px solid var(--color-red); */
 }
 
 .root__principal__blogInfo__container--info{
@@ -554,6 +571,41 @@ body.modal-open {
   font-size: 1.4rem;
 }
 
+.card__pagination__ul{
+  display: flex;
+  margin-top: 20px;
+  gap: 20px;
+  font-size: 22px;
+  color: var(--color-red);
+  font-weight: bold;
+}
+
+.card__pagination__ul a:hover,
+.card__pagination__ul a:focus,
+.card__pagination__ul a:active{
+  border: none;
+  outline: none;
+  outline: 5px solid var(--color-red);
+  border-radius: 5px;
+}
+
+/* PRINCIPAL RESPONSIVE */
+@media (min-width:500px){
+
+}
+
+@media (min-width:1000px){ 
+  .carta{
+    width: 30%;
+    margin: auto;
+  }
+
+  .carta__container{
+    flex-direction: row;
+    gap: 20px;
+  }
+
+}
 
 
 
