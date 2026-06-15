@@ -422,3 +422,56 @@ footer{
 .columna-copy p{
   color: var(--color-gray);
 }
+
+
+
+
+
+.root__main__devPhoto {
+  background-color: #8C8F93;
+  padding: 2rem; /* Agregué un padding para que el contenido no quede pegado a los bordes */
+  border-radius: 8px; /* Opcional: si quieres bordes redondeados en el fondo */
+}
+/* Contenedor principal que activa la cuadrícula */
+.devPhoto__grid {
+  display: grid;
+  /* Crea columnas automáticas que se ajustan al espacio disponible */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+  justify-items: center;
+}
+
+/* Estilo básico para las tarjetas */
+.devPhoto__card {
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.devPhoto__card:hover {
+  transform: translateY(-5px);
+}
+
+/* Estilo para el contenedor de la imagen (avatar) */
+.devPhoto__avatar-wrapper {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  border-radius: 50%; /* Esto hace que la foto sea circular */
+  border: 3px solid #ddd;
+}
+
+.devPhoto__avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Asegura que la imagen no se deforme */
+}
+
+/* Estilo para el nombre */
+.devPhoto__name {
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #F2D7D5;
+}
+

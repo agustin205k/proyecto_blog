@@ -180,12 +180,14 @@ body.modal-open {
 /* HEADER SECTION */
 .root__header{
   width: 100%;
+  position: sticky;
+  top: 0;
 }
 
 .root__header__nav{
   display: flex;
-  position: fixed;
-  top: 0;
+  
+  
   width: 100%;
   background-color: var(--color-black);
   color:#A31310;
@@ -421,4 +423,67 @@ footer{
 
 .columna-copy p{
   color: var(--color-gray);
+}
+
+
+
+
+.root__main__devPhoto {
+  background-color: #8C8F93;
+  padding: 2rem; /* Agregué un padding para que el contenido no quede pegado a los bordes */
+  border-radius: 8px; /* Opcional: si quieres bordes redondeados en el fondo */
+}
+/* Contenedor principal que activa la cuadrícula */
+.devPhoto__grid {
+  display: grid;
+  /* Crea columnas automáticas que se ajustan al espacio disponible */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+  justify-items: center;
+}
+
+/* Estilo básico para las tarjetas */
+.devPhoto__card {
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.devPhoto__card:hover {
+  transform: translateY(-5px);
+}
+
+/* Estilo para el contenedor de la imagen (avatar) */
+.devPhoto__avatar-wrapper {
+  width: 160px;
+  height: 160px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  border-radius: 50%; /* Esto hace que la foto sea circular */
+  border: 3px solid #ddd;
+}
+
+.devPhoto__avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Asegura que la imagen no se deforme */
+}
+
+/* Estilo para el nombre */
+.devPhoto__name {
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #F2D7D5;
+}
+.devPhoto__avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block; /* <--- Agrega esto para evitar espacios extra abajo */
+}
+.root__main__devPhoto {
+  padding-top: 2rem; /* Asegura que el padding interno empuje el contenido */
+  overflow: hidden;  /* Esto ayuda a contener los márgenes internos */
+  background-color: #8C8F93;
+  /* ... resto de tus estilos */
 }
