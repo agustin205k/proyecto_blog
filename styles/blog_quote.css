@@ -180,15 +180,15 @@ body.modal-open {
 /* HEADER SECTION */
 .root__header{
   width: 100%;
+  position: sticky;
+  top: 0;
 }
 
 .root__header__nav{
   display: flex;
-  position: fixed;
-  top: 0;
   width: 100%;
   background-color: var(--color-black);
-  color:#A31310;
+  color:var(--color-red);
   padding: 20px;
 }
 
@@ -373,7 +373,12 @@ body.modal-open {
     display: inline-block;
   }
 }
+
 /* MAIN SECTION */
+.root__main__quote{ 
+  display: flex;
+}
+
 
 
 /* FOOTER SECTION */
