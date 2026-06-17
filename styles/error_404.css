@@ -375,6 +375,86 @@ body.modal-open {
 }
 /* MAIN SECTION */
 
+main{
+  background:linear-gradient(to bottom,var(--color-black) 50%,var(--color-gray) 50%);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+}
+
+.error404{
+  text-align:center;
+  width:900px;
+}
+
+.numero{
+  width: 100%;
+  font-size:10rem;
+  color:var(--color-gray);
+  line-height:1;
+  font-weight:900;
+  letter-spacing:10px;
+}
+
+.error404 h3{
+  margin-top:-60px;
+  font-size:3rem;
+  color:var(--color-white);
+  text-transform:uppercase;
+  letter-spacing:3px;
+}
+
+.error404 p{
+  margin:30px auto;
+  width:70%;
+  color:var(--color-white);
+  font-size:1.3rem;
+  line-height:35px;
+}
+
+main .btn{
+  display:inline-block;
+  margin-top:20px;
+  padding:18px 70px;
+  text-decoration:none;
+  background:var(--color-red);
+  color:var(--color-white);
+  border-radius:50px;
+  font-weight:bold;
+  letter-spacing:2px;
+  transition:.3s;
+}
+
+.btn:hover{
+  background:var(--color-white);
+  color:var(--color-red);
+  transform:scale(1.05);
+}
+
+.error404::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+  repeating-linear-gradient(
+    -45deg,
+    transparent 0px,
+    transparent 6px,
+    rgba(163,19,16,.04) 7px,
+    transparent 8px);
+  pointer-events:none;
+}
+
+@media(min-width:1000px){
+  .numero{
+    font-size: 10rem;
+  }
+
+  .error404 h3{
+    font-size: 4rem;
+  }
+}
 
 /* FOOTER SECTION */
 footer{
@@ -421,4 +501,14 @@ footer{
 
 .columna-copy p{
   color: var(--color-gray);
+}
+
+
+/* DISABLED FOOTER AND HEADER */
+.root__header{
+  display: none;
+}
+
+.container,.root__footer{
+  display: none;
 }
