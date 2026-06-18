@@ -80,6 +80,9 @@ lo tanto el diseño de la segunda columna debe aparecer debajo.
                     <li><a href="./error_404.html">Sesion</a></li>
                     <li><a href="./contact.html">Contacto</a></li>
                     <li><a href="./about_us.html">Nosotros</a></li>
+                    <li>
+                      <button data-bs-toggle="modal" data-bs-target="#exampleModal">Suscribete</button>
+                    </li>
                   </ul>        
                 </div>
               </div>
@@ -99,7 +102,7 @@ lo tanto el diseño de la segunda columna debe aparecer debajo.
           
           <!-- Button trigger modal -->
           <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Subscribete
+            Suscribete
           </button>
           <ul>
             <li><a href="./index.html">Inicio</a></li>
@@ -121,7 +124,7 @@ lo tanto el diseño de la segunda columna debe aparecer debajo.
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h2 class="modal-title fs-5" id="exampleModalLabel">Subscribete ahora, y enterate de todo!</h2>
+              <h2 class="modal-title fs-5" id="exampleModalLabel">Subscribete ahora, <br> y enterate de todo!</h2>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -130,48 +133,48 @@ lo tanto el diseño de la segunda columna debe aparecer debajo.
                   <div class="subscription__group">
                     <label for="subscription-email" class="subscription__label">Email</label>
                     <input type="email" id="subscription-email" name="email" 
-                    class="subscription__input" placeholder="youremail@example.com" required>
+                    class="subscription__input" placeholder="TuEmail@example.com" required>
                   </div>
 
                   <div class="subscription__group">
                     <label for="subscription-name" class="subscription__label">Nombre</label>
                     <input type="text" id="subscription-name" name="name" 
-                    class="subscription__input" placeholder="Your name" required>
+                    class="subscription__input" placeholder="Ej:Roberto Carlos Diaz" required>
                   </div>
                 </div>
 
                 <div class="subscription__info">
                   <div class="subscription__group">
-                    <label for="card-type">Tipo de tarjeta:</label>
+                    <label for="card-type">Tipo de <br> tarjeta:</label>
                     <select id="card-type" name="card-type" required>
-                      <option value="">Select a card</option>
-                      <option value="visa-debit">Visa Debit</option>
-                      <option value="visa-credit">Visa Credit</option>
+                      <option value="">Elije tu tarjeta</option>
+                      <option value="visa-debit">Visa Debito</option>
+                      <option value="visa-credit">Visa Credito</option>
                       <option value="mastercard">MasterCard</option>
                       <option value="amex">American Express</option>
                     </select>
                   </div>
                     
                   <div class="subscription__group">
-                    <label for="card-number">Card Number:</label>
+                    <label for="card-number">Numero de Tarjeta:</label>
                     <input type="text" id="card-number" name="card-number" maxlength="16" 
                     placeholder="1234 5678 9012 3456" required>
                   </div>
 
                   <div class="subscription__group">
-                    <label for="card-name">Name on Card:</label>
+                    <label for="card-name">Dueño de <br> la tarjeta:</label>
                     <input type="text" id="card-name" name="card-name" 
-                    placeholder="John Doe" required>
+                    placeholder="Ej:Roberto.C.Diaz" required>
                   </div>
 
                   <div class="subscription__group">
-                    <label for="expiration">Expiration Date:</label>
+                    <label for="expiration">Fecha de Vencimiento:</label>
                     <input type="month" id="expiration" name="expiration" 
                     placeholder="MM/YYYY" required>
                   </div>
 
                   <div class="subscription__group">
-                    <label for="cvv">Security Code (CVV):</label>
+                    <label for="cvv">Codigo de Seguridad (CVV):</label>
                     <input type="text" id="cvv" name="cvv" maxlength="4" 
                     placeholder="123" required>
                   </div>

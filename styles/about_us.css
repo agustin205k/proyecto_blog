@@ -16,6 +16,10 @@ PODER REUTILIZARLAS SI ES NECESARIO O MAS OPTIMO */
   box-sizing: border-box;
 }
 
+html,body{
+  overflow-x:hidden;
+}
+
 li,ul,a{
   text-decoration: none;
   list-style: none;
@@ -124,6 +128,21 @@ body.modal-open {
   padding-right: 0 !important;
 }
 
+/* FIX MODAL */
+.subscription__info  .subscription__group > select{
+  width: 180px;
+}
+
+.subscription__info .subscription__group > input{
+  width: 180px;
+}
+
+.subscription__group label{
+  color: var(--color-white);
+}
+
+
+
 /* OFF CANVAS CONFIG */
 .offcanvas{
   background-color: var(--color-black);
@@ -131,7 +150,7 @@ body.modal-open {
 }
 
 #staticBackdrop{
-  width: 180px;
+  width: 80vw;
 }
 
 .offcanvas-header{
@@ -154,25 +173,61 @@ body.modal-open {
 
 .offcanvas-header h5{
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 .offcanvas-body{
   background-color: var(--color-black);
   width: 100%;
+  padding: 0;
 }
 
-.offcanvas-body ul{
+.offcanvas-body > div > ul{
   display: flex;
   flex-direction: column;
   width: 100%;
-  gap: 20px;
+  padding: 0;
 }
 
-.offcanvas-body ul > li > a{
-  border-bottom: 1px solid var(--color-red);
+.offcanvas-body ul > li{
+  border: 2px solid var(--color-white);
+  padding: 20px 0px;
+  text-align: center;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.offcanvas-body ul > li:hover,.offcanvas-body ul > li:focus{
+  background-color: var(--color-gray);
+}
+
+.offcanvas-body ul > li > a,.offcanvas-body ul > li > button{
+  /* border-bottom: 1px solid var(--color-red); */
   padding-bottom: 10px;
   font-weight: bold;
+  font-size: 30px;
+}
+
+/* .offcanvas-body ul > li:nth-child(4){
+  border-bottom: none;
+} */
+
+.offcanvas-body ul > li:last-child{
+  background-color: var(--color-red);
+  /* margin: 10px 80px; */
+}
+
+.offcanvas-body ul > li > button{
+  color: var(--color-white);
+}
+
+.offcanvas-body ul > li{
+  transition: .4s ease background-color;
+}
+
+.offcanvas-body ul > li:last-child:hover,
+.offcanvas-body ul > li:last-child:focus{
+  background-color: var(--color-gray);
 }
 
 
@@ -245,7 +300,7 @@ body.modal-open {
   display: flex;
   gap: 20px;
   justify-content: space-between;
-  margin: 30px;
+  margin: 15px;
 }
 
 .subscription__group input {
@@ -265,21 +320,25 @@ body.modal-open {
   width: 220px;
   padding: 5px;
   appearance: none;
-  -webkit-appearance: none; /* Safari/Chrome */
+  -webkit-appearance: none;
   -moz-appearance: none;
 
 }
 
 .subscription__group select:hover,
 .subscription__group select:focus{
-  outline: none !important;
-  box-shadow: none !important;
+  outline: none;
+  box-shadow: none;
   border: 1px solid var(--color-red);
 }
 
 .subscription__group input:focus::placeholder,
 .subscription__group input:active::placeholder{
   opacity: 0;
+}
+
+.modal-header h2{
+  margin-left: 10px;
 }
 
 /* HEADER RESPONSIVE */
