@@ -16,6 +16,10 @@ PODER REUTILIZARLAS SI ES NECESARIO O MAS OPTIMO */
   box-sizing: border-box;
 }
 
+html,body{
+  overflow-x:hidden;
+}
+
 li,ul,a{
   text-decoration: none;
   list-style: none;
