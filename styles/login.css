@@ -231,6 +231,12 @@ body.modal-open {
   background-color: var(--color-gray);
 }
 
+.offcanvas li > a{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
 /* HEADER SECTION */
 .root__header{
   position: sticky;

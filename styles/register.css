@@ -231,6 +231,11 @@ body.modal-open {
   background-color: var(--color-gray);
 }
 
+.offcanvas li > a{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
 
 
 /* HEADER SECTION */
@@ -434,249 +439,142 @@ body.modal-open {
   }
 }
 /* MAIN SECTION */
-body{
-
-    font-family:Arial, Helvetica, sans-serif;
-
-    background:linear-gradient(
-        to bottom,
-        var(--color-black) 50%,
-        var(--color-gray) 50%
-    );
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    min-height:100vh;
-
-    padding:50px;
-
+.root__principal__main{
+  /* font-family:Arial, Helvetica, sans-serif; */
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:100vh;
+  padding:20px;
+  background-image: url('../assets/login-resources/recital.png');
 }
 
-.container{
-
-    width:900px;
-
-    background:rgba(31,31,34,.95);
-
-    padding:45px;
-
-    border-radius:20px;
-
-    border:2px solid var(--color-red);
-
-    position:relative;
-
-    overflow:hidden;
-
+.container__form{
+  max-width:900;
+  background:rgba(31,31,34,.70);
+  padding:45px;
+  border-radius:20px;
+  border:2px solid transparent;
+  position:relative;
+  overflow:hidden;
 }
 
-.container::before{
-
-    content:"";
-
-    position:absolute;
-
-    inset:0;
-
-    background:
-    repeating-linear-gradient(
-        -45deg,
-        transparent 0,
-        transparent 6px,
-        rgba(163,19,16,.04) 7px,
-        transparent 8px
-    );
-
-    pointer-events:none;
-
+.container__form::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
 }
 
-.container h2{
-
-    text-align:center;
-
-    color:var(--color-white);
-
-    font-size:3rem;
-
-    letter-spacing:4px;
-
-    text-transform:uppercase;
-
-    margin-bottom:40px;
-
+.container__form h2{
+  text-align:center;
+  color:var(--color-white);
+  font-size:3rem;
+  letter-spacing:4px;
+  text-transform:uppercase;
+  margin-bottom:40px;
 }
 
 .campo{
-
-    margin-bottom:25px;
-
+  margin-bottom:25px;
 }
 
 .campo label{
-
-    display:block;
-
-    color:var(--color-white);
-
-    margin-bottom:8px;
-
-    font-weight:bold;
-
-    letter-spacing:1px;
-
+  display:block;
+  color:var(--color-white);
+  margin-bottom:8px;
+  font-weight:bold;
+  letter-spacing:1px;
 }
 
-input,
-select{
-
-    width:100%;
-
-    padding:15px;
-
-    background:transparent;
-
-    border:2px solid var(--color-gray);
-
-    border-radius:10px;
-
-    color:var(--color-white);
-
-    font-size:1rem;
-
-    transition:.3s;
-
+.root__principal__main input,
+.root__principal__main select{
+  width:100%;
+  padding:15px;
+  background:transparent;
+  border:2px solid var(--color-gray);
+  border-radius:10px;
+  color:var(--color-white);
+  font-size:1rem;
+  transition:.3s;
 }
 
-input::placeholder{
-
-    color:var(--color-gray);
-
+.root__principal__main input::placeholder{
+  color:var(--color-gray);
 }
 
-input:focus,
-select:focus{
-
-    outline:none;
-
-    border-color:var(--color-red);
-
+.root__principal__main input:focus,
+.root__principal__main select:focus{
+  outline:none;
+  border-color:var(--color-red);
 }
 
 .fila{
-
-    display:flex;
-
-    gap:20px;
-
+  display:flex;
+  gap:20px;
 }
 
 .fila .campo{
-
-    width:100%;
-
+  width:100%;
 }
 
 .radio{
-
-    display:flex;
-
-    gap:30px;
-
-    margin-top:10px;
-
+  display:flex;
+  gap:30px;
+  margin-top:10px;
 }
 
 .radio label{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:8px;
-
-    color:var(--color-white);
-
+  display:flex;
+  align-items:center;
+  gap:8px;
+  color:var(--color-white);
 }
 
 .radio input{
-
-    width:auto;
-
-    accent-color:var(--color-red);
-
+  width:auto;
+  accent-color:var(--color-red);
 }
 
-button{
-
-    width:100%;
-
-    margin-top:30px;
-
-    padding:18px;
-
-    background:var(--color-red);
-
-    color:var(--color-white);
-
-    border:none;
-
-    border-radius:50px;
-
-    font-size:1.1rem;
-
-    font-weight:bold;
-
-    letter-spacing:2px;
-
-    cursor:pointer;
-
-    transition:.3s;
-
+.root__principal__main button{
+  width:100%;
+  margin-top:30px;
+  padding:18px;
+  background:var(--color-red);
+  color:var(--color-white);
+  border:none;
+  border-radius:50px;
+  font-size:1.1rem;
+  font-weight:bold;
+  letter-spacing:2px;
+  cursor:pointer;
+  transition:.3s;
 }
 
-button:hover{
-
-    background:var(--color-white);
-
-    color:var(--color-red);
-
+.root__principal__main button:hover{
+  background:var(--color-white);
+  color:var(--color-red);
 }
 
 @media(max-width:768px){
+  .container__form{
+    width:100%;
+    padding:30px;
+  }
 
-    .container{
+  .fila{
+    flex-direction:column;
+    gap:0;
+  }
 
-        width:100%;
+  .radio{
+    flex-direction:column;
+    gap:10px;
+  }
 
-        padding:30px;
-
-    }
-
-    .fila{
-
-        flex-direction:column;
-
-        gap:0;
-
-    }
-
-    .radio{
-
-        flex-direction:column;
-
-        gap:10px;
-
-    }
-
-    .container h2{
-
-        font-size:2.2rem;
-
-    }
-
+  .container__form h2{
+    font-size:2.2rem;
+  }
 }
 
 
