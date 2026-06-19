@@ -15,7 +15,7 @@ para recuperar la misma.
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>El Ritual del Rock - Registro</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-  <link rel="stylesheet" href="./styles/login.css">
+  <link rel="stylesheet" href="./styles/register.css">
   
 </head>
 <body>
@@ -163,15 +163,126 @@ para recuperar la misma.
 
       <main class="root__principal__main">
         <!-- Code Here Login -->
+        <section class="container__form">
 
+          <h2>Registro</h2>
+
+          <form>
+
+              <div class="campo">
+
+                  <label>Nombre Completo</label>
+
+                  <input type="text" placeholder="Ingresa tu nombre completo">
+
+              </div>
+
+              <div class="campo">
+
+                  <label>Correo Electrónico</label>
+
+                  <input type="email" placeholder="Ingresa tu correo">
+
+              </div>
+
+              <div class="fila">
+
+                  <div class="campo">
+
+                      <label>Teléfono</label>
+
+                      <input type="tel" placeholder="3811234567">
+
+                  </div>
+
+                  <div class="campo">
+
+                      <label>Fecha de nacimiento</label>
+
+                      <input type="date">
+
+                  </div>
+
+              </div>
+
+              <div class="campo">
+
+                  <label>Género</label>
+
+                  <div class="radio">
+
+                      <label><input type="radio" name="g"> Hombre</label>
+
+                      <label><input type="radio" name="g"> Mujer</label>
+
+                      <label><input type="radio" name="g"> Otro</label>
+
+                  </div>
+
+              </div>
+
+              <div class="campo">
+
+                  <label>Dirección</label>
+
+                  <input type="text" placeholder="Ingresa tu dirección">
+
+              </div>
+
+              <div class="campo">
+
+                  <input type="text" placeholder="Departamento / Piso">
+
+              </div>
+
+              <div class="fila">
+
+                  <div class="campo">
+
+                      <select>
+
+                          <option>País</option>
+                          <option>Argentina</option>
+                          <option>Chile</option>
+                          <option>Uruguay</option>
+
+                      </select>
+
+                  </div>
+
+                  <div class="campo">
+
+                      <input type="text" placeholder="Ciudad">
+
+                  </div>
+
+              </div>
+
+              <div class="fila">
+
+                  <div class="campo">
+
+                      <input type="text" placeholder="Provincia">
+
+                  </div>
+
+                  <div class="campo">
+
+                      <input type="text" placeholder="Código Postal">
+
+                  </div>
+
+              </div>
+
+              <button>Registrarse</button>
+
+          </form>
+
+        </section>
         <!-- Code Here -->
       </main>
       
-      <div class="root__principal__img-container">
-        <!-- Code Here Image Container -->
-
-        <!-- Code Here -->
-      </div>
+     
     </div>
     
     <footer class="text-secondary py-5">
