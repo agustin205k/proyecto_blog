@@ -16,6 +16,10 @@ PODER REUTILIZARLAS SI ES NECESARIO O MAS OPTIMO */
   box-sizing: border-box;
 }
 
+html,body{
+  overflow-x:hidden;
+}
+
 li,ul,a{
   text-decoration: none;
   list-style: none;
@@ -53,8 +57,6 @@ h1{
 
 /* BOOTSTRAP CONFIG */
 /* MODAL CONFIG */
-
-
 .modal-content{
   background-color: var(--color-black);
   color: var(--color-red);
@@ -126,6 +128,21 @@ body.modal-open {
   padding-right: 0 !important;
 }
 
+/* FIX MODAL */
+.subscription__info  .subscription__group > select{
+  width: 180px;
+}
+
+.subscription__info .subscription__group > input{
+  width: 180px;
+}
+
+.subscription__group label{
+  color: var(--color-white);
+}
+
+
+
 /* OFF CANVAS CONFIG */
 .offcanvas{
   background-color: var(--color-black);
@@ -133,7 +150,7 @@ body.modal-open {
 }
 
 #staticBackdrop{
-  width: 180px;
+  width: 80vw;
 }
 
 .offcanvas-header{
@@ -156,25 +173,61 @@ body.modal-open {
 
 .offcanvas-header h5{
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 .offcanvas-body{
   background-color: var(--color-black);
   width: 100%;
+  padding: 0;
 }
 
-.offcanvas-body ul{
+.offcanvas-body > div > ul{
   display: flex;
   flex-direction: column;
   width: 100%;
-  gap: 20px;
+  padding: 0;
 }
 
-.offcanvas-body ul > li > a{
-  border-bottom: 1px solid var(--color-red);
+.offcanvas-body ul > li{
+  border: 2px solid var(--color-white);
+  padding: 20px 0px;
+  text-align: center;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.offcanvas-body ul > li:hover,.offcanvas-body ul > li:focus{
+  background-color: var(--color-gray);
+}
+
+.offcanvas-body ul > li > a,.offcanvas-body ul > li > button{
+  /* border-bottom: 1px solid var(--color-red); */
   padding-bottom: 10px;
   font-weight: bold;
+  font-size: 30px;
+}
+
+/* .offcanvas-body ul > li:nth-child(4){
+  border-bottom: none;
+} */
+
+.offcanvas-body ul > li:last-child{
+  background-color: var(--color-red);
+  /* margin: 10px 80px; */
+}
+
+.offcanvas-body ul > li > button{
+  color: var(--color-white);
+}
+
+.offcanvas-body ul > li{
+  transition: .4s ease background-color;
+}
+
+.offcanvas-body ul > li:last-child:hover,
+.offcanvas-body ul > li:last-child:focus{
+  background-color: var(--color-gray);
 }
 
 
@@ -183,7 +236,6 @@ body.modal-open {
 .root__header{
   position: sticky;
   top: 0;
-  z-index: 1030;
 }
 
 
@@ -245,7 +297,7 @@ body.modal-open {
   display: flex;
   gap: 20px;
   justify-content: space-between;
-  margin: 30px;
+  margin: 15px;
 }
 
 .subscription__group input {
@@ -280,6 +332,10 @@ body.modal-open {
 .subscription__group input:focus::placeholder,
 .subscription__group input:active::placeholder{
   opacity: 0;
+}
+
+.modal-header h2{
+  margin-left: 10px;
 }
 
 /* HEADER RESPONSIVE */
@@ -377,7 +433,99 @@ body.modal-open {
 }
 /* MAIN SECTION */
 
+.root__principal__main{
+  padding: 20px;
+}
 
+.root__principal__main h2{
+  color: var(--color-white);
+}
+
+.contacto{
+  margin: auto;
+  max-width:1200px;
+  display:flex;
+  outline: 4px solid var(--color-red);
+  flex-direction: column;
+  gap:40px;
+  background:var(--color-black);
+  padding:30px;
+  box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+.info h1{
+  font-size:50px;
+  margin-bottom:20px;
+}
+
+.info p{  
+  color:var(--color-white);
+  margin-bottom:20px;
+}
+
+.root__principal__main form{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+
+.root__principal__main input,
+.root__principal__main textarea{
+  color: var(--color-black);
+  padding:15px;
+  border:none;
+  background:var(--color-gray);
+  font-size:16px;
+}
+
+.root__principal__main input::placeholder,
+.root__principal__main textarea::placeholder{
+  color: var(--color-white);
+}
+
+.root__principal__main textarea{
+  height:120px;
+  resize:none;
+}
+
+.root__principal__main button{
+  background:var(--color-red);
+  color:var(--color-white);
+  border:none;
+  padding:15px;
+  font-size:18px;
+  font-weight: bold;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.root__principal__main button:hover{
+  outline: 4px solid var(--color-white);
+}
+
+.mapa{
+  outline: 4px solid var(--color-red);
+  border-radius: 5px;
+}
+
+.mapa iframe{
+  width:100%;
+  height:100%;
+  min-height:500px;
+}
+
+@media (min-width:800px){
+  .contacto{
+    flex-direction: row;
+  }
+
+  .info{
+    width: 50%;
+  }
+  .mapa{
+    width: 50%;
+  }
+}
 
 /* FOOTER SECTION */
 footer{

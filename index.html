@@ -80,6 +80,9 @@ lo tanto el diseño de la segunda columna debe aparecer debajo.
                     <li><a href="./login.html">Sesion</a></li>
                     <li><a href="./contact.html">Contacto</a></li>
                     <li><a href="./about_us.html">Nosotros</a></li>
+                    <li>
+                      <button data-bs-toggle="modal" data-bs-target="#exampleModal">Suscribete</button>
+                    </li>
                   </ul>        
                 </div>
               </div>
@@ -99,7 +102,7 @@ lo tanto el diseño de la segunda columna debe aparecer debajo.
           
           <!-- Button trigger modal -->
           <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Subscribete
+            Suscribete
           </button>
           <ul>
             <li><a href="./index.html">Inicio</a></li>
@@ -121,7 +124,7 @@ lo tanto el diseño de la segunda columna debe aparecer debajo.
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h2 class="modal-title fs-5" id="exampleModalLabel">Subscribete ahora, y enterate de todo!</h2>
+              <h2 class="modal-title fs-5" id="exampleModalLabel">Subscribete ahora, <br> y enterate de todo!</h2>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -130,48 +133,48 @@ lo tanto el diseño de la segunda columna debe aparecer debajo.
                   <div class="subscription__group">
                     <label for="subscription-email" class="subscription__label">Email</label>
                     <input type="email" id="subscription-email" name="email" 
-                    class="subscription__input" placeholder="youremail@example.com" required>
+                    class="subscription__input" placeholder="TuEmail@example.com" required>
                   </div>
 
                   <div class="subscription__group">
                     <label for="subscription-name" class="subscription__label">Nombre</label>
                     <input type="text" id="subscription-name" name="name" 
-                    class="subscription__input" placeholder="Your name" required>
+                    class="subscription__input" placeholder="Ej:Roberto Carlos Diaz" required>
                   </div>
                 </div>
 
                 <div class="subscription__info">
                   <div class="subscription__group">
-                    <label for="card-type">Tipo de tarjeta:</label>
+                    <label for="card-type">Tipo de <br> tarjeta:</label>
                     <select id="card-type" name="card-type" required>
-                      <option value="">Select a card</option>
-                      <option value="visa-debit">Visa Debit</option>
-                      <option value="visa-credit">Visa Credit</option>
+                      <option value="">Elije tu tarjeta</option>
+                      <option value="visa-debit">Visa Debito</option>
+                      <option value="visa-credit">Visa Credito</option>
                       <option value="mastercard">MasterCard</option>
                       <option value="amex">American Express</option>
                     </select>
                   </div>
                     
                   <div class="subscription__group">
-                    <label for="card-number">Card Number:</label>
+                    <label for="card-number">Numero de Tarjeta:</label>
                     <input type="text" id="card-number" name="card-number" maxlength="16" 
                     placeholder="1234 5678 9012 3456" required>
                   </div>
 
                   <div class="subscription__group">
-                    <label for="card-name">Name on Card:</label>
+                    <label for="card-name">Dueño de <br> la tarjeta:</label>
                     <input type="text" id="card-name" name="card-name" 
-                    placeholder="John Doe" required>
+                    placeholder="Ej:Roberto.C.Diaz" required>
                   </div>
 
                   <div class="subscription__group">
-                    <label for="expiration">Expiration Date:</label>
+                    <label for="expiration">Fecha de Vencimiento:</label>
                     <input type="month" id="expiration" name="expiration" 
                     placeholder="MM/YYYY" required>
                   </div>
 
                   <div class="subscription__group">
-                    <label for="cvv">Security Code (CVV):</label>
+                    <label for="cvv">Codigo de Seguridad (CVV):</label>
                     <input type="text" id="cvv" name="cvv" maxlength="4" 
                     placeholder="123" required>
                   </div>
@@ -189,19 +192,116 @@ lo tanto el diseño de la segunda columna debe aparecer debajo.
 
       <div class="root__principal__slider-container">
         <!-- Code Here Slider-->
-
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="assets/images/indio-mitad.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/images/Banner_vj.JPG" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/images/NTVG-slide.jpg" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
         <!-- Code Here -->
       </div>
-      <main class="root__principal__main">
-        <!-- Code Here Blog Content -->
-        
-        <!-- Code Here -->
-      </main>
-      <aside class="root__aside">
-        <!-- Code Here Aside Content -->
+      <div  class="root__principal__blogInfo">
+        <main class="root__principal__blogInfo__container root__principal__blogInfo__container--info">
+          <!-- Code Here Blog Content -->
+          <h2>Ultimas Noticias</h2>
 
-        <!-- Code Here -->
-      </aside>
+          <div class="carta__container">
+            <div class="carta">
+              <img src="assets/images/Buen viaje.PNG" class="carta__img" alt="...">
+              <div class="carta__body">
+                <h5 class="carta__title">"Las despedidas son de esos dolores dulces"</h5>
+                <p class="carta__text">Solo esperar cantando...</p>
+                <a href="./error_404.html" class="carta__btn">Ver mas</a>
+              </div>
+            </div>
+
+            <div class="carta">
+              <img src="assets/images/norte rock.jpg" class="carta__img" alt="...">
+              <div class="carta__body">
+                <h5 class="carta__title">Prepate para festival más grande del Norte Argentino."</h5>
+                <p class="carta__text">Toda la info aqui</p>
+                <a href="./error_404.html" class="carta__btn">Ver mas</a>
+              </div>
+            </div>
+
+            <div class="carta">
+              <img src="assets/images/Gemini_Generated_Image_77tzdi77tzdi77tz.png" class="carta__img" alt="...">
+              <div class="carta__body">
+                <h5 class="carta__title">Tras 10 años la Renga vuelve a Jujuy</h5>
+                <p class="carta__text">Info y entradas  </p>
+                <a href="./error_404.html" class="carta__btn">Ver mas</a>
+              </div>
+            </div>
+          </div>
+          
+
+          <nav class="card__pagination">
+            <ul class="card__pagination__ul">
+              <li><a href="#">Anterior</a></li>
+              <li><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">Siguiente</a></li>
+            </ul>
+          </nav>
+
+          <!-- Code Here -->
+        </main>
+      
+        <aside class="root__principal__blogInfo__container root__principal__blogInfo__container--aside">
+          <!-- Code Here Aside Content -->
+          <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRk75ZT9N4yM26p0x5eV4ygzgvAjm8ioCKDyyfkbgnr-0-FsgOBb6XyxcfE&s=10" alt="">
+          </div>
+          <div>
+            <form>
+              <h3>¿Se te perdio algo?, escribelo aqui!</h3>
+              
+              <div class="search__group">
+                <label for="search-query" class="search__label">Escriba el nombre del articulo</label>
+                <input type="text" id="search-query" name="q" 
+                        class="search__input" placeholder="Ej: música, tecnología..." required>
+              </div>
+
+              <button type="submit" class="search__button">Buscar</button>
+            </form>
+
+            <h3>Categorias</h3>
+            
+            <ul>
+              <li><a href="#">Conciertos</a></li>
+              <li><a href="#">Noticias</a></li>
+              <li><a href="#">Aniversarios</a></li>
+              <li><a href="#">Musicos</a></li>
+              <li><a href="#">Eventos</a></li>
+              <li><a href="#">Grupos</a></li>
+            </ul>
+          
+          </div>
+
+          <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRk75ZT9N4yM26p0x5eV4ygzgvAjm8ioCKDyyfkbgnr-0-FsgOBb6XyxcfE&s=10" alt="">
+          </div>
+          <!-- Code Here -->
+        </aside>
+      
+      </div>
+      
     </div>
 
     <footer class="text-secondary py-5">

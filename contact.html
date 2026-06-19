@@ -44,6 +44,9 @@ puedan enviar consultas.
                     <li><a href="./login.html">Sesion</a></li>
                     <li><a href="./contact.html">Contacto</a></li>
                     <li><a href="./about_us.html">Nosotros</a></li>
+                    <li>
+                      <button data-bs-toggle="modal" data-bs-target="#exampleModal">Suscribete</button>
+                    </li>
                   </ul>        
                 </div>
               </div>
@@ -63,7 +66,7 @@ puedan enviar consultas.
           
           <!-- Button trigger modal -->
           <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Subscribete
+            Suscribete
           </button>
           <ul>
             <li><a href="./index.html">Inicio</a></li>
@@ -81,11 +84,12 @@ puedan enviar consultas.
 
     <div class="root__principal">
 
+      <!-- Modal -->
       <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h2 class="modal-title fs-5" id="exampleModalLabel">Subscribete ahora, y enterate de todo!</h2>
+              <h2 class="modal-title fs-5" id="exampleModalLabel">Subscribete ahora, <br> y enterate de todo!</h2>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -94,48 +98,48 @@ puedan enviar consultas.
                   <div class="subscription__group">
                     <label for="subscription-email" class="subscription__label">Email</label>
                     <input type="email" id="subscription-email" name="email" 
-                    class="subscription__input" placeholder="youremail@example.com" required>
+                    class="subscription__input" placeholder="TuEmail@example.com" required>
                   </div>
 
                   <div class="subscription__group">
                     <label for="subscription-name" class="subscription__label">Nombre</label>
                     <input type="text" id="subscription-name" name="name" 
-                    class="subscription__input" placeholder="Your name" required>
+                    class="subscription__input" placeholder="Ej:Roberto Carlos Diaz" required>
                   </div>
                 </div>
 
                 <div class="subscription__info">
                   <div class="subscription__group">
-                    <label for="card-type">Tipo de tarjeta:</label>
+                    <label for="card-type">Tipo de <br> tarjeta:</label>
                     <select id="card-type" name="card-type" required>
-                      <option value="">Select a card</option>
-                      <option value="visa-debit">Visa Debit</option>
-                      <option value="visa-credit">Visa Credit</option>
+                      <option value="">Elije tu tarjeta</option>
+                      <option value="visa-debit">Visa Debito</option>
+                      <option value="visa-credit">Visa Credito</option>
                       <option value="mastercard">MasterCard</option>
                       <option value="amex">American Express</option>
                     </select>
                   </div>
                     
                   <div class="subscription__group">
-                    <label for="card-number">Card Number:</label>
+                    <label for="card-number">Numero de Tarjeta:</label>
                     <input type="text" id="card-number" name="card-number" maxlength="16" 
                     placeholder="1234 5678 9012 3456" required>
                   </div>
 
                   <div class="subscription__group">
-                    <label for="card-name">Name on Card:</label>
+                    <label for="card-name">Dueño de <br> la tarjeta:</label>
                     <input type="text" id="card-name" name="card-name" 
-                    placeholder="John Doe" required>
+                    placeholder="Ej:Roberto.C.Diaz" required>
                   </div>
 
                   <div class="subscription__group">
-                    <label for="expiration">Expiration Date:</label>
+                    <label for="expiration">Fecha de Vencimiento:</label>
                     <input type="month" id="expiration" name="expiration" 
                     placeholder="MM/YYYY" required>
                   </div>
 
                   <div class="subscription__group">
-                    <label for="cvv">Security Code (CVV):</label>
+                    <label for="cvv">Codigo de Seguridad (CVV):</label>
                     <input type="text" id="cvv" name="cvv" maxlength="4" 
                     placeholder="123" required>
                   </div>
@@ -152,9 +156,33 @@ puedan enviar consultas.
       </div>
 
       <main class="root__principal__main">
-        <!-- Code Here Contact Form Content -->
+        <section class="contacto">
 
-        <!-- Code Here -->
+          <div class="info">
+            <h2>Contáctanos</h2>
+
+            <p>
+              Eres bienvenido a contactarnos. Nuestro servicio al cliente
+              esta disponible entre lunes-viernes de 9:00 a.m.–8:00 p.m. and Sabado-Domingo 
+              10:00 a.m.–6:00 p.m.
+            </p>
+
+            <form>
+              <input type="text" placeholder="Escribe tu Nombre">
+
+              <input type="email" placeholder="Escribe tu Email">
+
+              <textarea placeholder="Deja tu mensaje"></textarea>
+
+              <button type="submit">Enviar</button>
+            </form>
+          </div>
+
+          <div class="mapa">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.833692793119!2d-58.37486348876094!3d-34.60836667283987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccadb57fd1e5f%3A0xcc737c4eb0a8614b!2sPlaza%20de%20Mayo!5e0!3m2!1ses-419!2sar!4v1781646927542!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+
+        </section><!-- Code Here Contact Form Content -->
       </main>
       <div class="root__aside">
         <!-- Code Here GPS Location Map Content -->
