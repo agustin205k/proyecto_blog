@@ -43,9 +43,36 @@ h1{
   width: 80px;
 }
 
+/* FONDO */
 .root__main {
   min-height: 60vh;
-  background-color: var(--color-gray);       
+  /* background: radial-gradient(
+    circle at center,
+    #1F1F22 0%,
+    #1F1F22 45%,
+    #5C1717 75%,
+    #A31310 100%
+  ); */     
+
+  background: linear-gradient(
+    135deg,
+    #1F1F22 0%,
+    #2A2224 40%,
+    #5C1717 75%,
+    #A31310 100%
+  );
+}
+
+@media (min-width:765px){
+ /* .root__main {
+    background: linear-gradient(
+    135deg,
+    #1F1F22 0%,
+    #2A2224 40%,
+    #5C1717 75%,
+    #A31310 100%
+    );
+  } */ 
 }
 
 .root{/* COLORES PALETA DE COLORES */
@@ -239,12 +266,12 @@ body.modal-open {
 /* HEADER SECTION */
 .root__header{
   width: 100%;
+  position: sticky;
+  top: 0;
 }
 
 .root__header__nav{
   display: flex;
-  position: fixed;
-  top: 0;
   width: 100%;
   background-color: var(--color-black);
   color:#A31310;
@@ -438,6 +465,68 @@ body.modal-open {
 }
 /* MAIN SECTION */
 
+.root__main{
+  padding: 80px 40px;
+}
+
+.root__main h2{
+  text-align: center;
+  margin-bottom: 80px;
+  font-size: 25px;
+  background-color: var(--color-black);
+  padding: 20px;
+  border-radius: 5px;
+  color: var(--color-white);
+  outline:4px solid var(--color-red);
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: 1fr; /* Dispositivo pequeño */
+  gap: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: var(--color-black);
+  outline: 4px solid var(--color-red);
+}
+
+.imagen {
+  border: 2px solid var(--color-red);
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  background-color: var(--color-black);
+}
+
+.imagen img {
+  width: 100%;
+  display: block;
+}
+
+.imagen p {
+  padding: 10px;
+  color: var(--color-white);
+}
+
+@media (min-width: 768px) {
+  .galeria {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .root__main h2{
+    font-size: 40px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .root__main h2{
+    font-size: 60px;
+  }
+  
+  .galeria {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
 
 /* FOOTER SECTION */
 footer{
