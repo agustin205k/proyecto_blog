@@ -16,6 +16,14 @@ PODER REUTILIZARLAS SI ES NECESARIO O MAS OPTIMO */
   box-sizing: border-box;
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--color-gray);
+  -webkit-box-shadow: 0 0 0px 1000px var(--color-black) inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
 html,body{
   overflow-x:hidden;
 }
@@ -124,7 +132,7 @@ h1{
 }
 
 body.modal-open {
-  overflow-y: scroll !important;
+  overflow-y: hidden !important;
   padding-right: 0 !important;
 }
 
@@ -141,7 +149,24 @@ body.modal-open {
   color: var(--color-white);
 }
 
+.subscription__info .subscription__group--expiration{
+  display: flex;
+  justify-content: space-between;
+}
 
+.subscription__info .subscription__group--expiration > div{
+  display: flex;
+  justify-content: space-between;
+  width: 180px;
+}
+
+.subscription__info .subscription__group--expiration > label{
+  width: 80px;
+}
+
+.subscription__info .subscription__group--expiration > div > input{
+  width: 50px;
+}
 
 /* OFF CANVAS CONFIG */
 .offcanvas{
