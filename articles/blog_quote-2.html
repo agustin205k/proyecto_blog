@@ -288,20 +288,25 @@ algunas personas en nuestro blog.
             <input
               type="text"
               class="comment-form__input"
-              placeholder="Tu nombre"
+              pattern="[A-Za-z0-9]+"
+              title="Solo letras y números"
+              minlength="8" maxlength="20"
+              placeholder="Usuario" spellcheck="false"
               required
             >
 
             <input
               type="email"
               class="comment-form__input"
-              placeholder="tuEmail@gmail.com"
+              maxlength="22"
+              placeholder="tuEmail@gmail.com" spellcheck="false"
               required
             >
 
             <textarea
               class="comment-form__textarea"
-              placeholder="Escribe tu comentario..."
+              placeholder="Escribe tu comentario..." spellcheck="false"
+              maxlength="300"
               required
             ></textarea>
 
