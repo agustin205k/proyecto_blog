@@ -98,18 +98,19 @@ algunas personas en nuestro blog.
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
+              <!-- form -->
               <form class="subscription__form" action="#" id="subscription-form">
                 <div class="subscription__info">
                   <div class="subscription__group">
                     <label for="subscription-email" class="subscription__label">Email</label>
                     <input type="email" id="subscription-email" name="email" 
-                    class="subscription__input" placeholder="TuEmail@example.com" required>
+                    class="subscription__input" placeholder="TuEmail@example.com" maxlength="32" spellcheck="false" required>
                   </div>
 
                   <div class="subscription__group">
                     <label for="subscription-name" class="subscription__label">Nombre</label>
                     <input type="text" id="subscription-name" name="name" 
-                    class="subscription__input" placeholder="Ej:Roberto Carlos Diaz" required>
+                    class="subscription__input" placeholder="Ej:Roberto Carlos Diaz" pattern="^[A-Za-z]+$" title="Ingrese solo letras (A-Z, a-z)" minlength="4" maxlength="18" spellcheck="false" required>
                   </div>
                 </div>
 
@@ -117,7 +118,7 @@ algunas personas en nuestro blog.
                   <div class="subscription__group">
                     <label for="card-type">Tipo de <br> tarjeta:</label>
                     <select id="card-type" name="card-type" required>
-                      <option value="">Elije tu tarjeta</option>
+                      <option selected disabled value="">Elije tu tarjeta</option>
                       <option value="visa-debit">Visa Debito</option>
                       <option value="visa-credit">Visa Credito</option>
                       <option value="mastercard">MasterCard</option>
@@ -127,26 +128,44 @@ algunas personas en nuestro blog.
                     
                   <div class="subscription__group">
                     <label for="card-number">Numero de Tarjeta:</label>
-                    <input type="text" id="card-number" name="card-number" maxlength="16" 
-                    placeholder="1234 5678 9012 3456" required>
+                    <input type="text" id="card-number" name="card-number" pattern="^[0-9]{13,19}$" title="Ingrese entre 13 y 19 dígitos numéricos" 
+                    placeholder="1234 5678 9012 3456" spellcheck="false" required>
                   </div>
 
                   <div class="subscription__group">
                     <label for="card-name">Dueño de <br> la tarjeta:</label>
                     <input type="text" id="card-name" name="card-name" 
-                    placeholder="Ej:Roberto.C.Diaz" required>
+                    placeholder="Ej:Roberto.C.Diaz" pattern="^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$" 
+                    title="Ingrese solo letras, espacios y acentos" spellcheck="false" required>
                   </div>
 
-                  <div class="subscription__group">
+                  <div class="subscription__group subscription__group--expiration">
                     <label for="expiration">Fecha de Vencimiento:</label>
-                    <input type="month" id="expiration" name="expiration" 
-                    placeholder="MM/YYYY" required>
+                    <div>
+                      <input
+                        type="text"
+                        placeholder="MM"
+                        maxlength="2"
+                        inputmode="numeric"
+                        pattern="^(0?[1-9]|1[0-2])$"
+                        spellcheck="false" >
+                      <span>/</span>
+                      <input
+                        type="text"
+                        placeholder="AA"
+                        maxlength="2"
+                        inputmode="numeric"
+                        pattern="^(2[6-9]|3[0-9])$"
+                        spellcheck="false"
+                      >
+                    </div>
+                    
                   </div>
 
                   <div class="subscription__group">
                     <label for="cvv">Codigo de Seguridad (CVV):</label>
                     <input type="text" id="cvv" name="cvv" maxlength="4" 
-                    placeholder="123" required>
+                    placeholder="123" pattern="^[0-9]{3,4}$" spellcheck="false" required>
                   </div>
                     
                 </div>
@@ -163,20 +182,23 @@ algunas personas en nuestro blog.
       <section class="root__main__quote">
         <!-- Code Here Quote Content -->
         <article class="root__main__quote__article">
-          <h2>Siempre en Nuestros Corazones</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum mollitia unde doloremque harum incidunt optio, voluptas distinctio fugiat, facere molestiae fuga suscipit, libero ratione a ipsa quas repudiandae sint. Laudantium!
-            Vero, doloribus! In ab est officiis possimus iste incidunt. Maxime iste esse numquam dolor itaque nemo error, odio vero cumque corporis est, alias reiciendis, in amet nisi nesciunt minus ratione?
-            Nemo ea possimus debitis quam facilis sunt voluptatum dolor doloribus aut esse placeat repudiandae earum similique laudantium, corrupti totam beatae incidunt! Debitis temporibus, nobis fugit provident maxime omnis officia voluptatibus.
-            Eaque dolores ad, non voluptatem neque soluta, necessitatibus culpa, tenetur nulla dolore repudiandae ut saepe perferendis cum incidunt inventore pariatur earum fugit accusantium id itaque voluptate corporis deserunt reprehenderit! Recusandae.
-            Pariatur eveniet dolorem nemo nulla! Iure consequatur deserunt cum cumque, mollitia vitae voluptatum saepe, illum dolorem impedit sunt. Tenetur iste asperiores illo, similique non laudantium ab qui culpa eaque possimus.
-            Similique blanditiis numquam assumenda optio. Sed unde vero dolorem! Iure alias obcaecati ex eos, sint autem tempore repellendus nemo optio repudiandae vitae ipsam enim dicta maxime suscipit dolor quasi officiis.
-            Aliquam esse amet eum ratione aspernatur id vero officiis exercitationem, dicta aliquid dolor corrupti architecto atque in provident, voluptas sequi unde laudantium possimus laborum? Voluptatem praesentium fugit similique facilis laboriosam.
-            Culpa veritatis sint debitis! Eius, suscipit non. Consectetur, quaerat. Exercitationem doloribus porro alias excepturi quibusdam dolorem cum explicabo. Velit numquam quas modi mollitia perferendis vitae ex, dolore iure eveniet cum.
-            Et, deserunt provident consequuntur rerum sed aliquid iste ut consequatur quibusdam saepe facilis perferendis neque deleniti cum ab ratione? Vel facilis molestias cum repellat doloremque laboriosam laborum natus labore reprehenderit.
-            Adipisci laborum asperiores sapiente voluptatum ratione ex modi perferendis vitae. Quam veniam minima illum veritatis repellendus perspiciatis eveniet, dolorum placeat iusto velit, nesciunt animi eius natus sequi dolores minus alias.
+          <h2>Banquete en el Norte</h2>
+          <p style="text-align: justify; line-height: 1.6;" >
+             La confirmación del recital de La Renga en la provincia de Jujuy ha generado una gran expectativa en todo el país. La banda de Mataderos se presentará el próximo sábado 15 de agosto de 2026
+             en el predio de la Ciudad Cultural, en San Salvador de Jujuy, marcando un hito en la agenda cultural del NOA.  Las entradas para este "banquete" tienen un valor general de $80.000,
+             al cual debe sumarse un costo por servicio de $8.000, totalizando $88.000 por ticket. La venta se realiza de manera oficial a través de la plataforma Arte Infernal, donde se aceptan tarjetas de crédito,
+             débito y dinero en cuenta.  Un detalle importante para los seguidores es que el Banco Macro ofrece un beneficio exclusivo de 6 cuotas sin interés para quienes abonen con sus tarjetas de crédito VISA o Mastercard.
+             Es fundamental recordar que las entradas son físicas y requieren ser retiradas personalmente por el titular de la compra.  Para facilitar el acceso, la producción ha dispuesto varios puntos de retiro físicos autorizados en distintas provincias.
+             Entre ellos se encuentran: Fixion en San Salvador de Jujuy, La Rockería en San Miguel de Tucumán, Atípico en Salta, Arte Infernal en CABA, El Sabbath en Don Torcuato, La Daga en Rosario y Edén en Córdoba.
+             El retiro de los tickets en estos puntos estará habilitado a partir del 18 de junio de 2026 y se extenderá hasta el viernes previo al show. Alternativamente, los asistentes podrán optar por retirar sus entradas en la boletería del predio el mismo día del evento,
+             en el horario de 12:00 a 21:00.  Para quienes viajan desde otras provincias, el acceso a la capital jujeña está garantizado por diversas vías. El Aeropuerto Internacional Dr. Horacio Guzmán, ubicado en Perico, recibe vuelos diarios desde Buenos Aires, Córdoba, Mendoza y Salta, 
+             siendo la opción más rápida para quienes llegan desde largas distancias.  En cuanto al transporte terrestre, la Terminal de Ómnibus de San Salvador de Jujuy es el nodo principal, conectada eficientemente a través de las Rutas Nacionales 9 y 34. La Ruta 9 se destaca como la vía más utilizada,
+             atravesando ciudades clave como Rosario, Córdoba, Santiago del Estero, Tucumán y Salta antes de llegar a destino.  Al buscar alojamiento, se recomienda realizar reservas con antelación, dado que la masiva afluencia de seguidores del "banquete" suele copar la capacidad hotelera de la capital jujeña.
+             La oferta incluye hoteles céntricos, hostales y opciones de alquileres temporarios, por lo que es aconsejable consultar sitios especializados de turismo con suficiente tiempo.Ante la alta demanda, la organización insiste en no adquirir entradas a través de redes sociales o revendedores no oficiales para evitar estafas.
+             Toda la información oficial y los formularios para acreditaciones por discapacidad están disponibles exclusivamente en el sitio web www.larenga.com.Se espera una jornada histórica en Ciudad Cultural, un predio acostumbrado a albergar eventos masivos y que ya se prepara con la logística necesaria para recibir a miles de fanáticos de todo el país.
+             La Renga vuelve al norte, y la invitación está hecha para vivir una experiencia inolvidable.
 
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, facilis, corporis libero pariatur error est porro unde ab quod architecto alias nostrum a atque rerum molestias commodi dolorem. Quo, similique?Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia iusto repudiandae at in totam harum, ducimus, enim nesciunt est quos saepe quaerat facilis vitae voluptatum vel cum ea dolorem cumque?
+          
           </p>
 
         </article>
@@ -269,20 +291,25 @@ algunas personas en nuestro blog.
             <input
               type="text"
               class="comment-form__input"
-              placeholder="Tu nombre"
+              pattern="[A-Za-z0-9]+"
+              title="Solo letras y números"
+              minlength="8" maxlength="20"
+              placeholder="Usuario" spellcheck="false"
               required
             >
 
             <input
               type="email"
               class="comment-form__input"
-              placeholder="tuEmail@gmail.com"
+              maxlength="22"
+              placeholder="tuEmail@gmail.com" spellcheck="false"
               required
             >
 
             <textarea
               class="comment-form__textarea"
-              placeholder="Escribe tu comentario..."
+              placeholder="Escribe tu comentario..." spellcheck="false"
+              maxlength="300"
               required
             ></textarea>
 

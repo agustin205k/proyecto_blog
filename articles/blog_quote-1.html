@@ -98,18 +98,19 @@ algunas personas en nuestro blog.
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
+              <!-- form -->
               <form class="subscription__form" action="#" id="subscription-form">
                 <div class="subscription__info">
                   <div class="subscription__group">
                     <label for="subscription-email" class="subscription__label">Email</label>
                     <input type="email" id="subscription-email" name="email" 
-                    class="subscription__input" placeholder="TuEmail@example.com" required>
+                    class="subscription__input" placeholder="TuEmail@example.com" maxlength="32" spellcheck="false" required>
                   </div>
 
                   <div class="subscription__group">
                     <label for="subscription-name" class="subscription__label">Nombre</label>
                     <input type="text" id="subscription-name" name="name" 
-                    class="subscription__input" placeholder="Ej:Roberto Carlos Diaz" required>
+                    class="subscription__input" placeholder="Ej:Roberto Carlos Diaz" pattern="^[A-Za-z]+$" title="Ingrese solo letras (A-Z, a-z)" minlength="4" maxlength="18" spellcheck="false" required>
                   </div>
                 </div>
 
@@ -117,7 +118,7 @@ algunas personas en nuestro blog.
                   <div class="subscription__group">
                     <label for="card-type">Tipo de <br> tarjeta:</label>
                     <select id="card-type" name="card-type" required>
-                      <option value="">Elije tu tarjeta</option>
+                      <option selected disabled value="">Elije tu tarjeta</option>
                       <option value="visa-debit">Visa Debito</option>
                       <option value="visa-credit">Visa Credito</option>
                       <option value="mastercard">MasterCard</option>
@@ -127,26 +128,44 @@ algunas personas en nuestro blog.
                     
                   <div class="subscription__group">
                     <label for="card-number">Numero de Tarjeta:</label>
-                    <input type="text" id="card-number" name="card-number" maxlength="16" 
-                    placeholder="1234 5678 9012 3456" required>
+                    <input type="text" id="card-number" name="card-number" pattern="^[0-9]{13,19}$" title="Ingrese entre 13 y 19 dígitos numéricos" 
+                    placeholder="1234 5678 9012 3456" spellcheck="false" required>
                   </div>
 
                   <div class="subscription__group">
                     <label for="card-name">Dueño de <br> la tarjeta:</label>
                     <input type="text" id="card-name" name="card-name" 
-                    placeholder="Ej:Roberto.C.Diaz" required>
+                    placeholder="Ej:Roberto.C.Diaz" pattern="^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$" 
+                    title="Ingrese solo letras, espacios y acentos" spellcheck="false" required>
                   </div>
 
-                  <div class="subscription__group">
+                  <div class="subscription__group subscription__group--expiration">
                     <label for="expiration">Fecha de Vencimiento:</label>
-                    <input type="month" id="expiration" name="expiration" 
-                    placeholder="MM/YYYY" required>
+                    <div>
+                      <input
+                        type="text"
+                        placeholder="MM"
+                        maxlength="2"
+                        inputmode="numeric"
+                        pattern="^(0?[1-9]|1[0-2])$"
+                        spellcheck="false" >
+                      <span>/</span>
+                      <input
+                        type="text"
+                        placeholder="AA"
+                        maxlength="2"
+                        inputmode="numeric"
+                        pattern="^(2[6-9]|3[0-9])$"
+                        spellcheck="false"
+                      >
+                    </div>
+                    
                   </div>
 
                   <div class="subscription__group">
                     <label for="cvv">Codigo de Seguridad (CVV):</label>
                     <input type="text" id="cvv" name="cvv" maxlength="4" 
-                    placeholder="123" required>
+                    placeholder="123" pattern="^[0-9]{3,4}$" spellcheck="false" required>
                   </div>
                     
                 </div>
@@ -163,20 +182,38 @@ algunas personas en nuestro blog.
       <section class="root__main__quote">
         <!-- Code Here Quote Content -->
         <article class="root__main__quote__article">
-          <h2>Siempre en Nuestros Corazones</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum mollitia unde doloremque harum incidunt optio, voluptas distinctio fugiat, facere molestiae fuga suscipit, libero ratione a ipsa quas repudiandae sint. Laudantium!
-            Vero, doloribus! In ab est officiis possimus iste incidunt. Maxime iste esse numquam dolor itaque nemo error, odio vero cumque corporis est, alias reiciendis, in amet nisi nesciunt minus ratione?
-            Nemo ea possimus debitis quam facilis sunt voluptatum dolor doloribus aut esse placeat repudiandae earum similique laudantium, corrupti totam beatae incidunt! Debitis temporibus, nobis fugit provident maxime omnis officia voluptatibus.
-            Eaque dolores ad, non voluptatem neque soluta, necessitatibus culpa, tenetur nulla dolore repudiandae ut saepe perferendis cum incidunt inventore pariatur earum fugit accusantium id itaque voluptate corporis deserunt reprehenderit! Recusandae.
-            Pariatur eveniet dolorem nemo nulla! Iure consequatur deserunt cum cumque, mollitia vitae voluptatum saepe, illum dolorem impedit sunt. Tenetur iste asperiores illo, similique non laudantium ab qui culpa eaque possimus.
-            Similique blanditiis numquam assumenda optio. Sed unde vero dolorem! Iure alias obcaecati ex eos, sint autem tempore repellendus nemo optio repudiandae vitae ipsam enim dicta maxime suscipit dolor quasi officiis.
-            Aliquam esse amet eum ratione aspernatur id vero officiis exercitationem, dicta aliquid dolor corrupti architecto atque in provident, voluptas sequi unde laudantium possimus laborum? Voluptatem praesentium fugit similique facilis laboriosam.
-            Culpa veritatis sint debitis! Eius, suscipit non. Consectetur, quaerat. Exercitationem doloribus porro alias excepturi quibusdam dolorem cum explicabo. Velit numquam quas modi mollitia perferendis vitae ex, dolore iure eveniet cum.
-            Et, deserunt provident consequuntur rerum sed aliquid iste ut consequatur quibusdam saepe facilis perferendis neque deleniti cum ab ratione? Vel facilis molestias cum repellat doloremque laboriosam laborum natus labore reprehenderit.
-            Adipisci laborum asperiores sapiente voluptatum ratione ex modi perferendis vitae. Quam veniam minima illum veritatis repellendus perspiciatis eveniet, dolorum placeat iusto velit, nesciunt animi eius natus sequi dolores minus alias.
-
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, facilis, corporis libero pariatur error est porro unde ab quod architecto alias nostrum a atque rerum molestias commodi dolorem. Quo, similique?Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia iusto repudiandae at in totam harum, ducimus, enim nesciunt est quos saepe quaerat facilis vitae voluptatum vel cum ea dolorem cumque?
+          <h2>"Las despedidas son de esos dolores dulces"</h2>
+          <p style="text-align: justify; line-height: 1.6;" >
+           El dolor dulce de despedir al Indio Solari
+              La mañana del 5 de junio de 2026 quedará grabada en la memoria colectiva 
+                 como el día en que el "bello fiero fuego" se mudó definitivamente de barrio.
+                  A los 77 años, tras una larga batalla contra el mal de Parkinson, falleció Carlos Alberto Solari.
+                  El hermético guardián de la lírica marginal y el arquitecto del fenómeno sociológico 
+                  más grande de la música en español ha dejado la intemperie de este mundo. 
+                  No se marchó un cantante; se apagó la voz que funcionó como brújula y refugio para tres generaciones
+                 .Su partida física abre un vacío que no se puede medir en compases musicales,
+                  sino en la vibración de las almas que encontraron en su misterio un hogar. 
+                   Un enigma magnéticoLa imagen del Indio Solari siempre fue un enigma magnético: 
+                   un chamán de anteojos oscuros y calva reluciente que, desde una distancia casi monacal,
+                   lograba una cercanía desgarradora con su gente. Esa distancia no enfriaba el vínculo; 
+                   al contrario, agigantaba su mito. Su figura generaba una devoción santa y pagana a la vez. 
+                   Verlo sobre un escenario, o incluso saberlo recluido en su búnker de Parque Leloir,
+                   provocaba una extraña mezcla de amparo y electricidad. 
+                   Era el artista que se negaba a la sobreexposición mediática para preservar lo sagrado:
+                   la pureza del mensaje. Había en su estampa una dignidad inquebrantable, 
+                   la de un hombre que jamás negoció sus principios con los mercaderes del templo,
+                   convirtiéndose en el último héroe contracultural. 
+                   Experiencia metafísica y sensorialEsa misma mística se trasladaba a una música
+                   que operaba como una experiencia metafísica y sensorial. Escuchar al Indio
+                   era adentrarse en paisajes sonoros donde la crudeza del rock 
+                   se fundía con una sofisticación vanguardista. Su voz, un lamento 
+                   avernoso pero extrañamente reconfortante, tenía el poder de canalizar la angustia,
+                   la rabia y los sueños de los desposeídos.  Sus canciones eran —y son— un catalizador 
+                   de emociones complejas: provocaban la euforia salvaje del escape y, al mismo tiempo,
+                   una melancolía introspectiva que estrujaba el pecho. La música de Solari funcionaba 
+                   como un espejo de las bellezas y las miserias humanas, un refugio donde el dolor
+                   individual se diluía en una catarsis colectiva. 
+                   El lenguaje ricotero y sus "misas"El Indio Solari dejó un legado cultural imposible de borrar porque creó códigos y metáforas con las que la gente común se identifica. Sus letras —cargadas de ironía feroz, imágenes alquímicas y metáforas sobre el poder— nunca subestimaron al oyente. El lenguaje ricotero inventó palabras y resignificó conceptos: "el lujo es vulgaridad", "las despedidas son esos dolores dulces" o "nuestro amo juega al esclavo".  Sus canciones no se escuchaban, se militaban en esas ceremonias colectivas bautizadas como "misas". En esos encuentros multitudinarios, la comunión alcanzaba su punto cumbre. El pogo ya no era violencia, sino un abrazo colosal de miles de desconocidos hermanados por una misma herida y redención. Allí, la música del indio se transformaba en el combustible de una liturgia única en el mundo, donde el desamparo se volvía fiesta y la resistencia se hacía canto.  Un grito eterno de libertadEl ángel amateur se ha despedido, pero nos quedan sus canciones como mapas de lucidez. Como él mismo cantó alguna vez: las despedidas no borran las huellas de quienes hicieron historia. Su estela incandescente seguirá brillando en cada pogo, en cada rincón y en cada bandera.  "El cuerpo del artista ha callado, pero el mito queda flotando en el aire, eterno, como un grito de libertad que ningún silencio podrá apagar."  Donde la música se vive y la mejor info se comparte: El Ritual del Rock.  
           </p>
 
         </article>
@@ -188,9 +225,9 @@ algunas personas en nuestro blog.
         <!-- Code Here Media Content -->
         <figure>
           <div>
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
+            <img src="imag-blog_quote-1/indio-publico.avif" alt="">
+            <img src="imag-blog_quote-1/indio-skay2.png" alt="">
+            <img src="imag-blog_quote-1/indio-grande.jpg" alt="">
           </div>
           <figcaption>Un vistazo al Escenario</figcaption>
           <a href="./gallery/image-galery-1.html">click aqui! para ver galeria</a>
@@ -269,20 +306,25 @@ algunas personas en nuestro blog.
             <input
               type="text"
               class="comment-form__input"
-              placeholder="Tu nombre"
+              pattern="[A-Za-z0-9]+"
+              title="Solo letras y números"
+              minlength="8" maxlength="20"
+              placeholder="Usuario" spellcheck="false"
               required
             >
 
             <input
               type="email"
               class="comment-form__input"
-              placeholder="tuEmail@gmail.com"
+              maxlength="22"
+              placeholder="tuEmail@gmail.com" spellcheck="false"
               required
             >
 
             <textarea
               class="comment-form__textarea"
-              placeholder="Escribe tu comentario..."
+              placeholder="Escribe tu comentario..." spellcheck="false"
+              maxlength="300"
               required
             ></textarea>
 
