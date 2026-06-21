@@ -15,8 +15,9 @@ para recuperar la misma.
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>El Ritual del Rock - Registro</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-  <link rel="stylesheet" href="./styles/register.css">
   <link rel="shortcut icon" href="./assets/images/blog-logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="./styles/register.css">
 </head>
 <body>
   <div class="root">
@@ -105,13 +106,13 @@ para recuperar la misma.
                   <div class="subscription__group">
                     <label for="subscription-email" class="subscription__label">Email</label>
                     <input type="email" id="subscription-email" name="email" 
-                    class="subscription__input" placeholder="TuEmail@example.com" maxlength="32" required>
+                    class="subscription__input" placeholder="TuEmail@example.com" maxlength="32" spellcheck="false" required>
                   </div>
 
                   <div class="subscription__group">
                     <label for="subscription-name" class="subscription__label">Nombre</label>
                     <input type="text" id="subscription-name" name="name" 
-                    class="subscription__input" placeholder="Ej:Roberto Carlos Diaz" pattern="^[A-Za-z]+$" title="Ingrese solo letras (A-Z, a-z)" minlength="4" maxlength="18" required>
+                    class="subscription__input" placeholder="Ej:Roberto Carlos Diaz" pattern="^[A-Za-z]+$" title="Ingrese solo letras (A-Z, a-z)" minlength="4" maxlength="18" spellcheck="false" required>
                   </div>
                 </div>
 
@@ -130,14 +131,14 @@ para recuperar la misma.
                   <div class="subscription__group">
                     <label for="card-number">Numero de Tarjeta:</label>
                     <input type="text" id="card-number" name="card-number" pattern="^[0-9]{13,19}$" title="Ingrese entre 13 y 19 dígitos numéricos" 
-                    placeholder="1234 5678 9012 3456" required>
+                    placeholder="1234 5678 9012 3456" spellcheck="false" required>
                   </div>
 
                   <div class="subscription__group">
                     <label for="card-name">Dueño de <br> la tarjeta:</label>
                     <input type="text" id="card-name" name="card-name" 
                     placeholder="Ej:Roberto.C.Diaz" pattern="^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$" 
-                    title="Ingrese solo letras, espacios y acentos" required>
+                    title="Ingrese solo letras, espacios y acentos" spellcheck="false" required>
                   </div>
 
                   <div class="subscription__group subscription__group--expiration">
@@ -149,7 +150,7 @@ para recuperar la misma.
                         maxlength="2"
                         inputmode="numeric"
                         pattern="^(0?[1-9]|1[0-2])$"
-                      >
+                        spellcheck="false" >
                       <span>/</span>
                       <input
                         type="text"
@@ -157,6 +158,7 @@ para recuperar la misma.
                         maxlength="2"
                         inputmode="numeric"
                         pattern="^(2[6-9]|3[0-9])$"
+                        spellcheck="false"
                       >
                     </div>
                     
@@ -165,7 +167,7 @@ para recuperar la misma.
                   <div class="subscription__group">
                     <label for="cvv">Codigo de Seguridad (CVV):</label>
                     <input type="text" id="cvv" name="cvv" maxlength="4" 
-                    placeholder="123" pattern="^[0-9]{3,4}$" required>
+                    placeholder="123" pattern="^[0-9]{3,4}$" spellcheck="false" required>
                   </div>
                     
                 </div>
@@ -185,114 +187,78 @@ para recuperar la misma.
 
           <h2>Registro</h2>
 
-          <form>
+          <form id="form-register">
+
+            <div class="campo">
+              <label>Nombre Completo</label>
+              <input type="text" placeholder="Ingresa tu nombre completo" pattern="^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$" title="Ingrese solo letras (A-Z, a-z, acentos, ñ y espacios)" spellcheck="false" required>
+            </div>
+
+            <div class="campo">
+              <label>Correo Electrónico</label>
+              <input type="email" placeholder="Ingresa tu correo" maxlength="22" spellcheck="false" required>
+            </div>
+
+            <div class="fila">
 
               <div class="campo">
-
-                  <label>Nombre Completo</label>
-
-                  <input type="text" placeholder="Ingresa tu nombre completo">
-
-              </div>
-
-              <div class="campo">
-
-                  <label>Correo Electrónico</label>
-
-                  <input type="email" placeholder="Ingresa tu correo">
-
-              </div>
-
-              <div class="fila">
-
-                  <div class="campo">
-
-                      <label>Teléfono</label>
-
-                      <input type="tel" placeholder="3811234567">
-
-                  </div>
-
-                  <div class="campo">
-
-                      <label>Fecha de nacimiento</label>
-
-                      <input type="date">
-
-                  </div>
-
+                <label>Teléfono</label>
+                <input type="tel" placeholder="3811234567" pattern="^\+?[0-9]{7,15}$" spellcheck="false">
               </div>
 
               <div class="campo">
+                <label>Fecha de nacimiento</label>
+                <input type="date" spellcheck="false">
+              </div>
 
-                  <label>Género</label>
+            </div>
 
-                  <div class="radio">
+            <div class="campo">
+              <label>Género</label>
+              <div class="radio">
+                <label><input type="radio" name="g" required> Hombre</label>
+                <label><input type="radio" name="g"> Mujer</label>
+                <label><input type="radio" name="g"> Otro</label>
+              </div>
+            </div>
 
-                      <label><input type="radio" name="g"> Hombre</label>
+            <div class="campo">
+              <label>Dirección</label>
+              <input type="text" placeholder="Ingresa tu dirección" pattern="^[A-Za-z0-9\s]+$" title="Ingrese solo letras, números y espacios (sin símbolos)" spellcheck="false">
+            </div>
 
-                      <label><input type="radio" name="g"> Mujer</label>
+            <div class="campo">
+              <input type="text" placeholder="Departamento / Piso" maxlength="4"pattern="[0-9]*" inputmode="numeric" spellcheck="false">
+            </div>
 
-                      <label><input type="radio" name="g"> Otro</label>
-
-                  </div>
-
+            <div class="fila">
+              <div class="campo">
+                <select class="" required>
+                  <option selected disabled>País</option>
+                  <option>Argentina</option>
+                  <option>Chile</option>
+                  <option>Uruguay</option>
+                  <option>Otro</option>
+                </select>
               </div>
 
               <div class="campo">
+                <input type="text" placeholder="Ciudad" pattern="^[A-Za-z0-9\s]+$" title="Ingrese solo letras, números y espacios (sin símbolos)" minlength="4" maxlength="32" spellcheck="false">
+              </div>
 
-                  <label>Dirección</label>
+            </div>
 
-                  <input type="text" placeholder="Ingresa tu dirección">
-
+            <div class="fila">
+              <div class="campo">
+                <input type="text" placeholder="Provincia" pattern="^[A-Za-z0-9\s]+$" title="Ingrese solo letras, números y espacios (sin símbolos)" minlength="4" maxlength="32" spellcheck="false">
               </div>
 
               <div class="campo">
-
-                  <input type="text" placeholder="Departamento / Piso">
-
+                <input type="text" placeholder="Código Postal" pattern="^[0-9]{4}$" title="Ingrese un código postal de 4 dígitos" spellcheck="false">
               </div>
+            </div>
 
-              <div class="fila">
-
-                  <div class="campo">
-
-                      <select>
-
-                          <option>País</option>
-                          <option>Argentina</option>
-                          <option>Chile</option>
-                          <option>Uruguay</option>
-
-                      </select>
-
-                  </div>
-
-                  <div class="campo">
-
-                      <input type="text" placeholder="Ciudad">
-
-                  </div>
-
-              </div>
-
-              <div class="fila">
-
-                  <div class="campo">
-
-                      <input type="text" placeholder="Provincia">
-
-                  </div>
-
-                  <div class="campo">
-
-                      <input type="text" placeholder="Código Postal">
-
-                  </div>
-
-              </div>
-
-              <button>Registrarse</button>
+            <button type="submit" form="form-register">Registrarse</button>
 
           </form>
 

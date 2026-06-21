@@ -24,6 +24,22 @@ input:-webkit-autofill:focus {
   transition: background-color 5000s ease-in-out 0s;
 }
 
+#form-register input,
+#form-register textarea {
+  -webkit-text-fill-color: var(--color-white); /* tu color */
+  color: var(--color-white);                   /* fallback */
+}
+
+
+
+#form-register input:-webkit-autofill,
+#form-register input:-webkit-autofill:hover,
+#form-register input:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--color-white);
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
 html,body{
   overflow-x:hidden;
 }
@@ -580,6 +596,22 @@ body.modal-open {
   background:var(--color-white);
   color:var(--color-red);
 }
+
+/* FIX FORM */
+#form-register select{
+  appearance: none;          
+  -webkit-appearance: none;  
+  -moz-appearance: none;     
+  padding-right: 2rem;
+  background: url("../assets/icons/arrow.png") no-repeat right 0.75rem center;
+  background-size: 1rem;
+}
+
+#form-register select > option{
+  background-color: var(--color-black);
+  border-radius: 5px;
+}
+
 
 @media(max-width:768px){
   .container__form{
