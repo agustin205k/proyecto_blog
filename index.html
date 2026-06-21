@@ -294,7 +294,7 @@ lo tanto el diseño de la segunda columna debe aparecer debajo.
               <div class="search__group">
                 <label for="search-query" class="search__label">Escriba el nombre del articulo</label>
                 <input type="text" id="search-query" name="q" 
-                        class="search__input" placeholder="Ej: música, tecnología..." required>
+                        class="search__input" placeholder="Ej: música, concierto..." pattern="^[A-Za-z0-9]+$" title="Ingrese solo letras y números (sin símbolos)" maxlength="36" required>
               </div>
 
               <button type="submit" class="search__button">Buscar</button>
