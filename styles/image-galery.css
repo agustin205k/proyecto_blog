@@ -45,14 +45,7 @@ h1{
 
 /* FONDO */
 .root__main {
-  min-height: 60vh;
-  /* background: radial-gradient(
-    circle at center,
-    #1F1F22 0%,
-    #1F1F22 45%,
-    #5C1717 75%,
-    #A31310 100%
-  ); */     
+  min-height: 60vh;     
 
   background: linear-gradient(
     135deg,
