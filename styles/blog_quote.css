@@ -133,6 +133,12 @@ body.modal-open {
 /* FIX MODAL */
 .subscription__info  .subscription__group > select{
   width: 180px;
+  appearance: none;          
+  -webkit-appearance: none;  
+  -moz-appearance: none;     
+  padding-right: 2rem;
+  background: url("../assets/icons/arrow.png") no-repeat right 0.75rem center;
+  background-size: 1rem;
 }
 
 .subscription__info .subscription__group > input{
