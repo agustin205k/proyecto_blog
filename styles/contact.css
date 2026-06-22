@@ -12,6 +12,14 @@ input:-webkit-autofill:focus {
   transition: background-color 5000s ease-in-out 0s;
 }
 
+#form-contact-us input:-webkit-autofill,
+#form-contact-us input:-webkit-autofill:hover,
+#form-contact-us input:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--color-black);
+  -webkit-box-shadow: 0 0 0px 1000px var(--color-gray) inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
 html,body{
   overflow-x:hidden;
 }

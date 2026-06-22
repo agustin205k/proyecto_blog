@@ -183,14 +183,14 @@
               10:00 a.m.–6:00 p.m.
             </p>
 
-            <form>
-              <input type="text" placeholder="Escribe tu Nombre">
+            <form id="form-contact-us">
+              <input type="text" placeholder="Escribe tu Nombre" pattern="[A-Za-z0-9]+" title="Solo letras y números, sin espacios ni símbolos" minlength="4" maxlength="20" required>
 
-              <input type="email" placeholder="Escribe tu Email">
+              <input type="email" placeholder="Escribe tu Email" maxlength="22" required>
 
-              <textarea placeholder="Deja tu mensaje"></textarea>
+              <textarea placeholder="Deja tu mensaje" pattern=".*" minlength="12" maxlength="300" required></textarea>
 
-              <button type="submit">Enviar</button>
+              <button type="submit" form="form-contact-us">Enviar</button>
             </form>
           </div>
 
