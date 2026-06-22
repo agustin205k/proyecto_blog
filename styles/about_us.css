@@ -53,7 +53,13 @@ h1{
 
 .root__main {
   min-height: 60vh;
-  background-color: var(--color-red);       
+  background: linear-gradient(
+    135deg,
+    #1F1F22 0%,
+    #2A2224 40%,
+    #5C1717 75%,
+    #A31310 100%
+  );       
 }
 
 .root{/* COLORES PALETA DE COLORES */
@@ -465,11 +471,9 @@ body.modal-open {
 }
 
 /* MAIN SECTION */
-.root__main__devPhoto {
-  background-color: var(--color-red);
-  /* padding: 2rem; */ /* Agregué un padding para que el contenido no quede pegado a los bordes */
-  /* border-radius: 8px; */ /* Opcional: si quieres bordes redondeados en el fondo */
-}
+/* .root__main__devPhoto {
+  
+} */
 /* Contenedor principal que activa la cuadrícula */
 .devPhoto__grid {
   display: grid;
@@ -530,6 +534,7 @@ body.modal-open {
 
 .root__main__devInfo{
   padding: 20px;
+  
 }
 
 .devInfo__container{
@@ -540,24 +545,44 @@ body.modal-open {
 .devInfo__container h2{
   padding: 20px;
   margin-bottom: 0;
-  background-color: var(--color-black);
+  background-color: transparent;
   color: var(--color-white);
   border: 4px solid var(--color-white);
+  border-radius: 5px;
 }
 
 .devInfo__container div{
   padding: 20px;
   color: var(--color-white);
-  background-color: var(--color-black);
+  background-color: transparent;
   border: 4px solid var(--color-white);
   border-top: none;
+  border-radius: 5px;
 }
 
 .devPhoto__grid{
-  background-color: var(--color-red);
+  background-color: transparent;
 }
 
+@media (min-width:600px){
+  .devInfo__container p{
+    font-size: 20px;
+  }
 
+  .devInfo__container h2{
+    font-size: 40px;
+  }
+}
+
+@media (min-width:1000px){
+  .devInfo__container p{
+    font-size: 25px;
+  }
+
+  .devInfo__container h2{
+    font-size: 50px;
+  }
+}
 
 /* FOOTER SECTION */
 footer{

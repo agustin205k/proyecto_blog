@@ -52,8 +52,13 @@ h1{
 }
 
 .root__main {
-  min-height: 60vh;
-  background-color: var(--color-gray);       
+  background: linear-gradient(
+    135deg,
+    #2B2B2F 0%,
+    #383033 40%,
+    #742020 75%,
+    #C01D19 100%
+  );           
 }
 
 .root{/* COLORES PALETA DE COLORES */
@@ -478,7 +483,9 @@ main{
 
 .numero{
   width: 100%;
-  font-size:10rem;
+  position: relative;
+  bottom: 60px;
+  font-size:4.5rem;
   color:var(--color-gray);
   line-height:1;
   font-weight:900;
@@ -487,7 +494,9 @@ main{
 
 .error404 h3{
   margin-top:-60px;
-  font-size:3rem;
+  font-size:2rem;
+  flex-wrap: wrap;
+  padding: 10px;
   color:var(--color-white);
   text-transform:uppercase;
   letter-spacing:3px;
@@ -536,7 +545,7 @@ main .btn{
 
 @media(min-width:1000px){
   .numero{
-    font-size: 10rem;
+    font-size: 7rem;
   }
 
   .error404 h3{

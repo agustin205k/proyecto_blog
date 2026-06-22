@@ -464,6 +464,13 @@ body.modal-open {
 
 .root__principal__main{
   padding: 20px;
+  background: linear-gradient(
+    135deg,
+    #2B2B2F 0%,
+    #383033 40%,
+    #742020 75%,
+    #C01D19 100%
+  );
 }
 
 .root__principal__main h2{
