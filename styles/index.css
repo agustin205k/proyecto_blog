@@ -222,19 +222,14 @@ body.modal-open {
 }
 
 .offcanvas-body ul > li > a,.offcanvas-body ul > li > button{
-  /* border-bottom: 1px solid var(--color-red); */
   padding-bottom: 10px;
   font-weight: bold;
   font-size: 30px;
 }
 
-/* .offcanvas-body ul > li:nth-child(4){
-  border-bottom: none;
-} */
 
 .offcanvas-body ul > li:last-child{
   background-color: var(--color-red);
-  /* margin: 10px 80px; */
 }
 
 .offcanvas-body ul > li > button{
@@ -563,7 +558,6 @@ body.modal-open {
   justify-content: center;
   margin-top: 60px;
   border-radius: 5px;
-  /* outline: 2px solid var(--color-red); */
   color: var(--color-white);
   margin-bottom: 60px;
 }
@@ -752,12 +746,6 @@ body.modal-open {
  .root__principal__slider-container .slider-image-1{
   object-fit: cover;
 }
-
-/*
-.root__principal__slider-container .slider-image-2{
-  object-fit: cover;
-  object-position: 0px;
-} */
 
 @media (min-width:500px){
   .carta img{
